@@ -48,6 +48,12 @@ void PlotChargeDis()
 	double ymax = 1.5;
 
 
+	TString colsyst;
+	if(doPbPb == 2 ) colsyst="XeXe";
+	if(doPbPb == 1 ) colsyst="PbPb";
+	if(doPbPb == 0 ) colsyst="pp";
+
+
 	int NPlots2 = (ietamaxL-ietaminL + ietamaxR-ietaminR)*(iphimax-iphimin);
 	const int NPlots =NPlots2;
 
@@ -263,7 +269,7 @@ void PlotChargeDis()
 			tex->Draw("SAME");
 
 			c->SetLogz();
-			if(ChargePlotsShort[index]->Integral() > 0) c->SaveAs(Form("Chargeplots/ShortPlot%d.png",index));
+			if(ChargePlotsShort[index]->Integral() > 0) c->SaveAs(Form("plots%s/Chargeplots/ShortPlot%d.png",colsyst.Data(),index));
 
 			ChargePlotsLong[index]->Draw("colz");
 
@@ -275,7 +281,7 @@ void PlotChargeDis()
 			tex->Draw("SAME");
 
 			c->SetLogz();
-			if(	ChargePlotsLong[index]->Integral() > 0) c->SaveAs(Form("Chargeplots/LongPlot%d.png",index));
+			if(	ChargePlotsLong[index]->Integral() > 0) c->SaveAs(Form("plots%s/Chargeplots/LongPlot%d.png",colsyst.Data(),index));
 			index = index + 1;
 
 		}
@@ -291,7 +297,7 @@ void PlotChargeDis()
 			tex->Draw("SAME");
 
 			c->SetLogz();
-			if(ChargePlotsShort[index]->Integral() > 0) c->SaveAs(Form("Chargeplots/ShortPlot%d.png",index));
+			if(ChargePlotsShort[index]->Integral() > 0) c->SaveAs(Form("plots%s/Chargeplots/ShortPlot%d.png",colsyst.Data(),index));
 
 			ChargePlotsLong[index]->Draw("colz");
 
@@ -303,7 +309,7 @@ void PlotChargeDis()
 			tex->Draw("SAME");
 
 			c->SetLogz();
-			if(	ChargePlotsLong[index]->Integral() > 0) c->SaveAs(Form("Chargeplots/LongPlot%d.png",index));
+			if(	ChargePlotsLong[index]->Integral() > 0) c->SaveAs(Form("plots%s/Chargeplots/LongPlot%d.png",colsyst.Data(),index));
 			index = index + 1;
 		}
 
