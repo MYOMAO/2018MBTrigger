@@ -253,6 +253,7 @@ void PlotChargeDis()
 
 	int	index = 0;
 	TLatex * tex;
+	TFile *fout = new TFile("ChargePlot%s.root",colsyst.Data());
 
 	for( int i = iphimin; i< iphimax; i++){
 
