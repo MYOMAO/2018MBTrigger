@@ -1,0 +1,327 @@
+DEBUG 2018-10-01 13:11:43,413: 	 Executing command: 'submit'
+DEBUG 2018-10-01 13:11:43,414: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-10-01 13:11:43,495: 	 Checking credentials
+DEBUG 2018-10-01 13:11:43,499: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-10-01 13:11:43,499: 	 Getting proxy life time left
+DEBUG 2018-10-01 13:11:44,512: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 690286
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:11:45,432: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 690284
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:11:45,432: 	 Proxy valid for 191:44:46 hours
+INFO 2018-10-01 13:11:45,432: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-10-01 13:11:45,433: 	 Loading CRAB configuration file.
+DEBUG 2018-10-01 13:11:45,438: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2018-10-01 13:11:45,701: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:11:45,702: 	 Checking credentials
+DEBUG 2018-10-01 13:11:45,702: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-10-01 13:11:45,702: 	 Getting proxy life time left
+DEBUG 2018-10-01 13:11:46,609: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 690284
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:11:47,526: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 690282
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:11:47,527: 	 Proxy valid for 191:44:44 hours
+DEBUG 2018-10-01 13:11:48,443: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u97569 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:11:49,409: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2018-10-01 13:11:49,525: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:11:49,525: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-10-01 13:11:49,525: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi_cmsweb.cern.ch for credential name
+DEBUG 2018-10-01 13:11:49,932: 	 Executing : 
+ command : myproxy-info -l 7b00d42b83b38dab118b5c0b64b86724cb6e0414 -s myproxy.cern.ch
+ output : username: 7b00d42b83b38dab118b5c0b64b86724cb6e0414
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 431:55:41  (18.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:11:49,934: 	 Myproxy is valid: 1554941
+DEBUG 2018-10-01 13:11:49,934: 	 Command use: submit
+DEBUG 2018-10-01 13:11:49,934: 	 Options use: ['-c', 'crabConfig_TEMPLATE.py']
+DEBUG 2018-10-01 13:11:50,936: 	 CRABClient version: 3.3.1809
+DEBUG 2018-10-01 13:11:50,936: 	 Instance is prod
+DEBUG 2018-10-01 13:11:50,936: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-10-01 13:11:50,936: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-10-01 13:11:50,936: 	 Started submission
+DEBUG 2018-10-01 13:11:50,936: 	 Working on /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145
+DEBUG 2018-10-01 13:11:52,323: 	 Loading required information from the environment
+DEBUG 2018-10-01 13:11:52,323: 	 Found CMSSW_10_1_5 for slc6_amd64_gcc630 with base /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5
+DEBUG 2018-10-01 13:11:52,323: 	 Loading required information from the environment
+DEBUG 2018-10-01 13:11:52,323: 	 Found CMSSW_10_1_5 for slc6_amd64_gcc630 with base /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5
+DEBUG 2018-10-01 13:11:52,378: 	 UNIQUE NAME: tarUUID c23cc951-377f-4961-a453-ab312d77a82a 
+DEBUG 2018-10-01 13:11:52,380: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferOutputs = True
+config.section_('JobType')
+config.JobType.psetName = 'XeXeDum.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.outputFiles = ['L1Ntuple.root']
+config.JobType.maxMemoryMB = 4000
+config.section_('Data')
+config.Data.inputDataset = '/HIMinimumBias9/XeXeRun2017-v1/RAW'
+config.Data.outputDatasetTag = 'XeXeMB'
+config.Data.totalUnits = -1
+config.Data.unitsPerJob = 1
+config.Data.splitting = 'EventAwareLumiBased'
+config.Data.inputDBS = 'global'
+config.Data.outLFNDirBase = '/store/group/phys_heavyions/zshi/MBTrigger/L1NutpleXeXeMB'
+config.Data.publication = False
+config.section_('Site')
+config.Site.whitelist = ['T2_US_MIT', 'T2_DE_RWTH', 'T2_UK_London_Brunel', 'T2_FR_GRIF_LLR', 'T2_US_Nebraska', 'T2_CH_CERN', 'T2_US_Vanderbilt', 'T2_US_Purdue']
+config.Site.storageSite = 'T2_CH_CERN'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2018-10-01 13:11:52,380: 	 self.config.JobType.psetName: XeXeDum.py
+INFO 2018-10-01 13:11:52,380: 	 Importing CMSSW configuration XeXeDum.py
+INFO 2018-10-01 13:11:52,732: 	 Finished importing CMSSW configuration XeXeDum.py
+DEBUG 2018-10-01 13:11:52,732: 	 Writing CMSSW configuration to /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145/inputs/PSet.py
+DEBUG 2018-10-01 13:11:53,205: 	 The following EDM output files will be collected: []
+DEBUG 2018-10-01 13:11:53,205: 	 The following TFile output files will be collected: ['L1Ntuple.root']
+DEBUG 2018-10-01 13:11:53,206: 	 The following user output files will be collected: []
+DEBUG 2018-10-01 13:11:53,206: 	 Loading required information from the environment
+DEBUG 2018-10-01 13:11:53,206: 	 Found CMSSW_10_1_5 for slc6_amd64_gcc630 with base /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5
+DEBUG 2018-10-01 13:11:53,206: 	 Making tarball in /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145/inputs/c23cc951-377f-4961-a453-ab312d77a82adefault.tgz
+DEBUG 2018-10-01 13:11:53,308: 	 Checking directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/lib
+DEBUG 2018-10-01 13:11:53,308: 	 Adding directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/lib to tarball
+DEBUG 2018-10-01 13:11:59,482: 	 Checking directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/biglib
+DEBUG 2018-10-01 13:11:59,483: 	 Adding directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/biglib to tarball
+DEBUG 2018-10-01 13:11:59,499: 	 Checking directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/module
+DEBUG 2018-10-01 13:12:00,352: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/DataFormats/L1TMuon/interface to tarball
+DEBUG 2018-10-01 13:12:01,417: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/DataFormats/L1Trigger/interface to tarball
+DEBUG 2018-10-01 13:12:02,404: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/EventFilter/L1TRawToDigi/interface to tarball
+DEBUG 2018-10-01 13:12:05,981: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/L1Trigger/L1TCalorimeter/interface to tarball
+DEBUG 2018-10-01 13:12:10,120: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/L1Trigger/L1TCalorimeter/data to tarball
+DEBUG 2018-10-01 13:12:19,399: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/L1Trigger/L1TMuonOverlap/interface to tarball
+DEBUG 2018-10-01 13:12:20,124: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/L1Trigger/L1TNtuples/interface to tarball
+DEBUG 2018-10-01 13:12:21,368: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/L1Trigger/L1TCommon/interface to tarball
+DEBUG 2018-10-01 13:12:22,217: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/L1Trigger/L1TMuon/interface to tarball
+DEBUG 2018-10-01 13:12:23,215: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/L1Trigger/L1TMuon/data to tarball
+DEBUG 2018-10-01 13:12:34,854: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/CandAlgos/interface to tarball
+DEBUG 2018-10-01 13:12:35,768: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/CandUtils/interface to tarball
+DEBUG 2018-10-01 13:12:36,346: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/Clustering1D/interface to tarball
+DEBUG 2018-10-01 13:12:36,705: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/ConditionDBWriter/interface to tarball
+DEBUG 2018-10-01 13:12:36,928: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/ParticleFlow/interface to tarball
+DEBUG 2018-10-01 13:12:38,396: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/PileupAlgos/interface to tarball
+DEBUG 2018-10-01 13:12:38,678: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/RecoAlgos/interface to tarball
+DEBUG 2018-10-01 13:12:38,928: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/RecoUtils/interface to tarball
+DEBUG 2018-10-01 13:12:39,035: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/Statistics/interface to tarball
+DEBUG 2018-10-01 13:12:39,141: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/TrackerMap/data to tarball
+DEBUG 2018-10-01 13:12:39,589: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/TrackerMap/interface to tarball
+DEBUG 2018-10-01 13:12:39,627: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/TriggerUtils/interface to tarball
+DEBUG 2018-10-01 13:12:39,769: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/UtilAlgos/interface to tarball
+DEBUG 2018-10-01 13:12:40,082: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/CommonTools/Utils/interface to tarball
+DEBUG 2018-10-01 13:12:41,612: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/Bfinder/Bfinder/interface to tarball
+DEBUG 2018-10-01 13:12:42,145: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/HeavyIonsAnalysis/Configuration/data to tarball
+DEBUG 2018-10-01 13:12:42,238: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/HeavyIonsAnalysis/EventAnalysis/interface to tarball
+DEBUG 2018-10-01 13:12:42,347: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/HeavyIonsAnalysis/JetAnalysis/data to tarball
+DEBUG 2018-10-01 13:12:42,836: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/HeavyIonsAnalysis/JetAnalysis/interface to tarball
+DEBUG 2018-10-01 13:12:44,039: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/HeavyIonsAnalysis/MuonAnalysis/interface to tarball
+DEBUG 2018-10-01 13:12:44,156: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/HeavyIonsAnalysis/MuonAnalysis/MuonAssociators/interface to tarball
+DEBUG 2018-10-01 13:12:44,256: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/HeavyIonsAnalysis/TrackAnalysis/interface to tarball
+DEBUG 2018-10-01 13:12:44,285: 	 Adding data directory /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/HeavyIonsAnalysis/VertexAnalysis/interface to tarball
+DEBUG 2018-10-01 13:12:44,770: 	 Uploading archive /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145/inputs/c23cc951-377f-4961-a453-ab312d77a82adefault.tgz (27 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-10-01 13:12:56,557: 	 Loading required information from the environment
+DEBUG 2018-10-01 13:12:56,557: 	 Found CMSSW_10_1_5 for slc6_amd64_gcc630 with base /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5
+DEBUG 2018-10-01 13:12:56,557: 	 Making tarball in /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145/inputs/debugFiles.tgz
+DEBUG 2018-10-01 13:12:56,612: 	 Uploading archive /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145/inputs/debugFiles.tgz (73 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-10-01 13:12:57,937: 	 Result uploading input files: 45479ea7917c3f6ae1b5b1c85605213dab52feefdf9c3b87f842e9bfb73beada.tar.gz 
+INFO 2018-10-01 13:12:57,938: 	 Sending the request to the server
+DEBUG 2018-10-01 13:12:57,938: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_CH_CERN', 'algoargs': 1, 'cachefilename': '45479ea7917c3f6ae1b5b1c85605213dab52feefdf9c3b87f842e9bfb73beada.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 4000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_10_1_5', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/HIMinimumBias9/XeXeRun2017-v1/RAW', 'lfn': '/store/group/phys_heavyions/zshi/MBTrigger/L1NutpleXeXeMB', 'dryrun': 0, 'workflow': 'crab_20181001_131145', 'sitewhitelist': ['T2_US_MIT', 'T2_DE_RWTH', 'T2_UK_London_Brunel', 'T2_FR_GRIF_LLR', 'T2_US_Nebraska', 'T2_CH_CERN', 'T2_US_Vanderbilt', 'T2_US_Purdue'], 'nonprodsw': 0, 'tfileoutfiles': ['L1Ntuple.root'], 'oneEventMode': 0, 'debugfilename': '38ced11e061234031bd5f859ef50843b0bad0608bb293838ffa6103e232a0e2b.tar.gz', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc630', 'totalunits': -1, 'splitalgo': 'EventAwareLumiBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'XeXeMB'} 
+DEBUG 2018-10-01 13:12:57,939: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=0&useparent=0&asyncdest=T2_CH_CERN&algoargs=1&cachefilename=45479ea7917c3f6ae1b5b1c85605213dab52feefdf9c3b87f842e9bfb73beada.tar.gz&numcores=1&generator=pythia&maxmemory=4000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_1_5&primarydataset=&inputdata=%2FHIMinimumBias9%2FXeXeRun2017-v1%2FRAW&lfn=%2Fstore%2Fgroup%2Fphys_heavyions%2Fzshi%2FMBTrigger%2FL1NutpleXeXeMB&dryrun=0&workflow=crab_20181001_131145&nonprodsw=0&oneEventMode=0&debugfilename=38ced11e061234031bd5f859ef50843b0bad0608bb293838ffa6103e232a0e2b.tar.gz&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc630&totalunits=-1&splitalgo=EventAwareLumiBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=XeXeMB&sitewhitelist=T2_US_MIT&sitewhitelist=T2_DE_RWTH&sitewhitelist=T2_UK_London_Brunel&sitewhitelist=T2_FR_GRIF_LLR&sitewhitelist=T2_US_Nebraska&sitewhitelist=T2_CH_CERN&sitewhitelist=T2_US_Vanderbilt&sitewhitelist=T2_US_Purdue&tfileoutfiles=L1Ntuple.root
+DEBUG 2018-10-01 13:12:59,299: 	 Result: {u'result': [{u'RequestName': u'181001_111258:szhaozho_crab_20181001_131145'}]}
+INFO 2018-10-01 13:12:59,302: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2018-10-01 13:12:59,302: 	 Task name: 181001_111258:szhaozho_crab_20181001_131145
+INFO 2018-10-01 13:12:59,303: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2018-10-01 13:12:59,303: 	 About to return
+INFO 2018-10-01 13:12:59,307: 	 Log file is /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145/crab.log
+DEBUG 2018-10-01 13:13:51,302: 	 Executing command: 'status'
+DEBUG 2018-10-01 13:13:51,309: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-10-01 13:13:51,321: 	 Checking credentials
+DEBUG 2018-10-01 13:13:51,324: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-10-01 13:13:51,324: 	 Getting proxy life time left
+DEBUG 2018-10-01 13:13:52,233: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 690158
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:13:52,942: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 690157
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:13:52,943: 	 Proxy valid for 191:42:38 hours
+DEBUG 2018-10-01 13:13:53,079: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:13:53,079: 	 Checking credentials
+DEBUG 2018-10-01 13:13:53,079: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-10-01 13:13:53,080: 	 Getting proxy life time left
+DEBUG 2018-10-01 13:13:53,887: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 690157
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:13:54,698: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 690155
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:13:54,699: 	 Proxy valid for 191:42:37 hours
+DEBUG 2018-10-01 13:13:55,668: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2018-10-01 13:13:55,778: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:13:55,779: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-10-01 13:13:55,779: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi_cmsweb.cern.ch for credential name
+DEBUG 2018-10-01 13:13:55,984: 	 Executing : 
+ command : myproxy-info -l 7b00d42b83b38dab118b5c0b64b86724cb6e0414 -s myproxy.cern.ch
+ output : username: 7b00d42b83b38dab118b5c0b64b86724cb6e0414
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 431:53:35  (18.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:13:55,985: 	 Myproxy is valid: 1554815
+DEBUG 2018-10-01 13:13:55,986: 	 Command use: status
+DEBUG 2018-10-01 13:13:55,986: 	 Options use: []
+DEBUG 2018-10-01 13:13:56,927: 	 CRABClient version: 3.3.1809
+DEBUG 2018-10-01 13:13:56,927: 	 Instance is prod
+DEBUG 2018-10-01 13:13:56,927: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-10-01 13:13:56,927: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-10-01 13:13:57,886: 	 Got information from server oracle database: {u'result': [u'181001_111258:szhaozho_crab_20181001_131145', u'None', u'None', u'SUBMITFAILED', u'SUBMIT', u'2018-10-01 11:12:59.158338', u'None', u'2018-10-01 11:13:41.708387', u"The CRAB server backend refuses to send jobs to the Grid scheduler. No locations found for dataset '/HIMinimumBias9/XeXeRun2017-v1/RAW'. (or at least for the part of the dataset that passed the lumi-mask and/or run-range selection).\n Found 2 (out of 2) blocks present only at blacklisted sites. Global CRAB3 blacklist is set([u'T3_RU_FIAN', u'T3_US_Kansas', u'T3_US_MIT', u'T3_UK_London_UCL', u'T3_US_UCD', u'T3_CO_Uniandes', u'T3_US_NU', u'T3_US_NotreDame', u'T2_IT_Rome', u'T2_US_Caltech', u'T3_IN_PUHEP', u'T3_UK_ScotGrid_ECDF', u'T2_CH_CERN_HLT', u'T3_CH_CERN_HelixNebula', u'T3_IN_TIFRCloud', u'T0_CH_CERN', u'T3_GR_IASA', u'T3_CN_PKU', u'T0_CH_CSCS_HPC', u'T3_IR_IPM', u'T2_RU_ITEP', u'T3_US_JHU', u'T3_BY_NCPHEP', u'T3_US_FSU', u'T3_KR_UOS', u'T3_CH_PSI']).\n User whitelist is set([u'T2_US_Vanderbilt', u'T2_US_MIT', u'T2_DE_RWTH', u'T2_UK_London_Brunel', u'T2_US_Purdue', u'T2_FR_GRIF_LLR', u'T2_US_Nebraska', u'T2_CH_CERN']).\n", u'CMSSW_10_1_5', u'slc6_amd64_gcc630', u'/HIMinimumBias9/XeXeRun2017-v1/RAW', u'F', u'0', u"['T2_US_MIT', 'T2_DE_RWTH', 'T2_UK_London_Brunel', 'T2_CH_CERN', 'T2_US_Purdue', 'T2_FR_GRIF_LLR', 'T2_US_Nebraska', 'T2_US_Vanderbilt']", u'[]', u'EventAwareLumiBased', u"{'splitOnRun': False, 'events_per_job': 1, 'halt_job_on_file_boundaries': False, 'runs': [], 'lumis': []}", u'45479ea7917c3f6ae1b5b1c85605213dab52feefdf9c3b87f842e9bfb73beada.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'szhaozho', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi', u'cms', u'None', u'None', u'XeXeMB-00000000000000000000000000000000', u'F', u'T2_CH_CERN', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['L1Ntuple.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'4000', u'10', u'None', u'[]', u'None', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'None', u'F', u'[]', u'T', u'/store/group/phys_heavyions/zshi/MBTrigger/L1NutpleXeXeMB', u'F', u'None', u'F', u'None', u'HIMinimumBias9', u'None', u'38ced11e061234031bd5f859ef50843b0bad0608bb293838ffa6103e232a0e2b.tar.gz', u'None', u'filetransfers', u'F', u'137.138.120.191', u'-1.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2018-10-01 13:13:57,889: 	 CRAB project directory:		/afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145
+INFO 2018-10-01 13:13:57,889: 	 Task name:			181001_111258:szhaozho_crab_20181001_131145
+INFO 2018-10-01 13:13:57,889: 	 Grid scheduler - Task Worker:	N/A yet - crab-prod-tw01
+INFO 2018-10-01 13:13:57,889: 	 Status on the CRAB server:	SUBMITFAILED
+INFO 2018-10-01 13:13:57,889: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/181001_111258%3Aszhaozho_crab_20181001_131145
+INFO 2018-10-01 13:13:57,889: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=szhaozho&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=181001_111258%3Aszhaozho_crab_20181001_131145
+ERROR 2018-10-01 13:13:57,889: 	 Failure message from the server:		The CRAB server backend refuses to send jobs to the Grid scheduler. No locations found for dataset '/HIMinimumBias9/XeXeRun2017-v1/RAW'. (or at least for the part of the dataset that passed the lumi-mask and/or run-range selection).
+				 Found 2 (out of 2) blocks present only at blacklisted sites. Global CRAB3 blacklist is set([u'T3_RU_FIAN', u'T3_US_Kansas', u'T3_US_MIT', u'T3_UK_London_UCL', u'T3_US_UCD', u'T3_CO_Uniandes', u'T3_US_NU', u'T3_US_NotreDame', u'T2_IT_Rome', u'T2_US_Caltech', u'T3_IN_PUHEP', u'T3_UK_ScotGrid_ECDF', u'T2_CH_CERN_HLT', u'T3_CH_CERN_HelixNebula', u'T3_IN_TIFRCloud', u'T0_CH_CERN', u'T3_GR_IASA', u'T3_CN_PKU', u'T0_CH_CSCS_HPC', u'T3_IR_IPM', u'T2_RU_ITEP', u'T3_US_JHU', u'T3_BY_NCPHEP', u'T3_US_FSU', u'T3_KR_UOS', u'T3_CH_PSI']).
+				 User whitelist is set([u'T2_US_Vanderbilt', u'T2_US_MIT', u'T2_DE_RWTH', u'T2_UK_London_Brunel', u'T2_US_Purdue', u'T2_FR_GRIF_LLR', u'T2_US_Nebraska', u'T2_CH_CERN']).
+				
+DEBUG 2018-10-01 13:13:57,890: 	 The task has not been submitted to the Grid scheduler yet. Not printing job information.
+INFO 2018-10-01 13:13:57,938: 	 Log file is /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145/crab.log
+DEBUG 2018-10-01 13:16:56,524: 	 Executing command: 'status'
+DEBUG 2018-10-01 13:16:56,525: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-10-01 13:16:56,536: 	 Checking credentials
+DEBUG 2018-10-01 13:16:56,538: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-10-01 13:16:56,538: 	 Getting proxy life time left
+DEBUG 2018-10-01 13:16:57,545: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 689973
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:16:58,251: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 689971
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:16:58,251: 	 Proxy valid for 191:39:33 hours
+DEBUG 2018-10-01 13:16:58,376: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:16:58,376: 	 Checking credentials
+DEBUG 2018-10-01 13:16:58,378: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-10-01 13:16:58,378: 	 Getting proxy life time left
+DEBUG 2018-10-01 13:16:59,184: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 689971
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:16:59,890: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 689970
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:16:59,891: 	 Proxy valid for 191:39:31 hours
+DEBUG 2018-10-01 13:17:00,871: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+DEBUG 2018-10-01 13:17:00,984: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:17:00,985: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-10-01 13:17:00,985: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi_cmsweb.cern.ch for credential name
+DEBUG 2018-10-01 13:17:01,189: 	 Executing : 
+ command : myproxy-info -l 7b00d42b83b38dab118b5c0b64b86724cb6e0414 -s myproxy.cern.ch
+ output : username: 7b00d42b83b38dab118b5c0b64b86724cb6e0414
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(052|031|0118|0105|0109).cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod)-tw(02|01).cern.ch
+  timeleft: 431:50:29  (18.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-10-01 13:17:01,191: 	 Myproxy is valid: 1554629
+DEBUG 2018-10-01 13:17:01,191: 	 Command use: status
+DEBUG 2018-10-01 13:17:01,191: 	 Options use: []
+DEBUG 2018-10-01 13:17:02,132: 	 CRABClient version: 3.3.1809
+DEBUG 2018-10-01 13:17:02,132: 	 Instance is prod
+DEBUG 2018-10-01 13:17:02,132: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-10-01 13:17:02,132: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-10-01 13:17:03,086: 	 Got information from server oracle database: {u'result': [u'181001_111258:szhaozho_crab_20181001_131145', u'None', u'None', u'SUBMITFAILED', u'SUBMIT', u'2018-10-01 11:12:59.158338', u'None', u'2018-10-01 11:13:41.708387', u"The CRAB server backend refuses to send jobs to the Grid scheduler. No locations found for dataset '/HIMinimumBias9/XeXeRun2017-v1/RAW'. (or at least for the part of the dataset that passed the lumi-mask and/or run-range selection).\n Found 2 (out of 2) blocks present only at blacklisted sites. Global CRAB3 blacklist is set([u'T3_RU_FIAN', u'T3_US_Kansas', u'T3_US_MIT', u'T3_UK_London_UCL', u'T3_US_UCD', u'T3_CO_Uniandes', u'T3_US_NU', u'T3_US_NotreDame', u'T2_IT_Rome', u'T2_US_Caltech', u'T3_IN_PUHEP', u'T3_UK_ScotGrid_ECDF', u'T2_CH_CERN_HLT', u'T3_CH_CERN_HelixNebula', u'T3_IN_TIFRCloud', u'T0_CH_CERN', u'T3_GR_IASA', u'T3_CN_PKU', u'T0_CH_CSCS_HPC', u'T3_IR_IPM', u'T2_RU_ITEP', u'T3_US_JHU', u'T3_BY_NCPHEP', u'T3_US_FSU', u'T3_KR_UOS', u'T3_CH_PSI']).\n User whitelist is set([u'T2_US_Vanderbilt', u'T2_US_MIT', u'T2_DE_RWTH', u'T2_UK_London_Brunel', u'T2_US_Purdue', u'T2_FR_GRIF_LLR', u'T2_US_Nebraska', u'T2_CH_CERN']).\n", u'CMSSW_10_1_5', u'slc6_amd64_gcc630', u'/HIMinimumBias9/XeXeRun2017-v1/RAW', u'F', u'0', u"['T2_US_MIT', 'T2_DE_RWTH', 'T2_UK_London_Brunel', 'T2_CH_CERN', 'T2_US_Purdue', 'T2_FR_GRIF_LLR', 'T2_US_Nebraska', 'T2_US_Vanderbilt']", u'[]', u'EventAwareLumiBased', u"{'splitOnRun': False, 'events_per_job': 1, 'halt_job_on_file_boundaries': False, 'runs': [], 'lumis': []}", u'45479ea7917c3f6ae1b5b1c85605213dab52feefdf9c3b87f842e9bfb73beada.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'szhaozho', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=szhaozho/CN=814893/CN=Zhaozhong Shi', u'cms', u'None', u'None', u'XeXeMB-00000000000000000000000000000000', u'F', u'T2_CH_CERN', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['L1Ntuple.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'4000', u'10', u'None', u'[]', u'None', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'None', u'F', u'[]', u'T', u'/store/group/phys_heavyions/zshi/MBTrigger/L1NutpleXeXeMB', u'F', u'None', u'F', u'None', u'HIMinimumBias9', u'None', u'38ced11e061234031bd5f859ef50843b0bad0608bb293838ffa6103e232a0e2b.tar.gz', u'None', u'filetransfers', u'F', u'137.138.120.191', u'-1.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2018-10-01 13:17:03,086: 	 CRAB project directory:		/afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145
+INFO 2018-10-01 13:17:03,086: 	 Task name:			181001_111258:szhaozho_crab_20181001_131145
+INFO 2018-10-01 13:17:03,086: 	 Grid scheduler - Task Worker:	N/A yet - crab-prod-tw01
+INFO 2018-10-01 13:17:03,087: 	 Status on the CRAB server:	SUBMITFAILED
+INFO 2018-10-01 13:17:03,087: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/181001_111258%3Aszhaozho_crab_20181001_131145
+INFO 2018-10-01 13:17:03,087: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=szhaozho&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=181001_111258%3Aszhaozho_crab_20181001_131145
+ERROR 2018-10-01 13:17:03,087: 	 Failure message from the server:		The CRAB server backend refuses to send jobs to the Grid scheduler. No locations found for dataset '/HIMinimumBias9/XeXeRun2017-v1/RAW'. (or at least for the part of the dataset that passed the lumi-mask and/or run-range selection).
+				 Found 2 (out of 2) blocks present only at blacklisted sites. Global CRAB3 blacklist is set([u'T3_RU_FIAN', u'T3_US_Kansas', u'T3_US_MIT', u'T3_UK_London_UCL', u'T3_US_UCD', u'T3_CO_Uniandes', u'T3_US_NU', u'T3_US_NotreDame', u'T2_IT_Rome', u'T2_US_Caltech', u'T3_IN_PUHEP', u'T3_UK_ScotGrid_ECDF', u'T2_CH_CERN_HLT', u'T3_CH_CERN_HelixNebula', u'T3_IN_TIFRCloud', u'T0_CH_CERN', u'T3_GR_IASA', u'T3_CN_PKU', u'T0_CH_CSCS_HPC', u'T3_IR_IPM', u'T2_RU_ITEP', u'T3_US_JHU', u'T3_BY_NCPHEP', u'T3_US_FSU', u'T3_KR_UOS', u'T3_CH_PSI']).
+				 User whitelist is set([u'T2_US_Vanderbilt', u'T2_US_MIT', u'T2_DE_RWTH', u'T2_UK_London_Brunel', u'T2_US_Purdue', u'T2_FR_GRIF_LLR', u'T2_US_Nebraska', u'T2_CH_CERN']).
+				
+DEBUG 2018-10-01 13:17:03,087: 	 The task has not been submitted to the Grid scheduler yet. Not printing job information.
+INFO 2018-10-01 13:17:03,099: 	 Log file is /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXeMB/crab_20181001_131145/crab.log

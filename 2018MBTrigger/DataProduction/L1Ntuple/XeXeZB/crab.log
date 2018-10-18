@@ -1,0 +1,469 @@
+DEBUG 2018-09-26 20:24:09,159: 	 Executing command: 'submit'
+DEBUG 2018-09-26 20:24:09,161: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-09-26 20:24:09,176: 	 Checking credentials
+DEBUG 2018-09-26 20:24:09,177: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-09-26 20:24:09,177: 	 Getting proxy life time left
+DEBUG 2018-09-26 20:24:09,882: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 691135
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:24:10,591: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 691134
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:24:10,591: 	 Proxy valid for 191:58:55 hours
+INFO 2018-09-26 20:24:10,592: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-09-26 20:24:10,592: 	 Loading CRAB configuration file.
+ERROR 2018-09-26 20:24:10,593: 	 Error while loading CRAB configuration:
+unexpected indent (crabConfig_TEMPLATE.py, line 15)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-09-26 20:24:10,594: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+unexpected indent (crabConfig_TEMPLATE.py, line 15)
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2018-09-26 20:24:33,168: 	 Executing command: 'submit'
+DEBUG 2018-09-26 20:24:33,169: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-09-26 20:24:33,174: 	 Checking credentials
+DEBUG 2018-09-26 20:24:33,175: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-09-26 20:24:33,175: 	 Getting proxy life time left
+DEBUG 2018-09-26 20:24:33,980: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 691111
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:24:34,586: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 691110
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:24:34,586: 	 Proxy valid for 191:58:31 hours
+INFO 2018-09-26 20:24:34,587: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-09-26 20:24:34,587: 	 Loading CRAB configuration file.
+ERROR 2018-09-26 20:24:34,590: 	 Error while loading CRAB configuration:
+'Configuration' object has no attribute 'Data'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-09-26 20:24:34,590: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'Configuration' object has no attribute 'Data'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2018-09-26 20:25:25,218: 	 Executing command: 'submit'
+DEBUG 2018-09-26 20:25:25,219: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-09-26 20:25:25,225: 	 Checking credentials
+DEBUG 2018-09-26 20:25:25,226: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-09-26 20:25:25,226: 	 Getting proxy life time left
+DEBUG 2018-09-26 20:25:25,931: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 691059
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:25:26,542: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 691058
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:25:26,543: 	 Proxy valid for 191:57:39 hours
+INFO 2018-09-26 20:25:26,543: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-09-26 20:25:26,543: 	 Loading CRAB configuration file.
+ERROR 2018-09-26 20:25:26,548: 	 Error while loading CRAB configuration:
+'Configuration' object has no attribute 'Data'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-09-26 20:25:26,548: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'Configuration' object has no attribute 'Data'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2018-09-26 20:25:47,964: 	 Executing command: 'submit'
+DEBUG 2018-09-26 20:25:47,964: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-09-26 20:25:47,970: 	 Checking credentials
+DEBUG 2018-09-26 20:25:47,971: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-09-26 20:25:47,971: 	 Getting proxy life time left
+DEBUG 2018-09-26 20:25:48,675: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 691036
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:25:49,380: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 691035
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:25:49,381: 	 Proxy valid for 191:57:16 hours
+INFO 2018-09-26 20:25:49,382: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-09-26 20:25:49,382: 	 Loading CRAB configuration file.
+ERROR 2018-09-26 20:25:49,742: 	 Error while loading CRAB configuration:
+'Configuration' object has no attribute 'Data'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-09-26 20:25:49,742: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'Configuration' object has no attribute 'Data'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2018-09-26 20:26:10,312: 	 Executing command: 'submit'
+DEBUG 2018-09-26 20:26:10,312: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-09-26 20:26:10,318: 	 Checking credentials
+DEBUG 2018-09-26 20:26:10,319: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-09-26 20:26:10,319: 	 Getting proxy life time left
+DEBUG 2018-09-26 20:26:11,022: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 691013
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:26:11,728: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 691013
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:26:11,729: 	 Proxy valid for 191:56:53 hours
+INFO 2018-09-26 20:26:11,730: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-09-26 20:26:11,730: 	 Loading CRAB configuration file.
+ERROR 2018-09-26 20:26:11,734: 	 Error while loading CRAB configuration:
+'Configuration' object has no attribute 'Data'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-09-26 20:26:11,734: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'Configuration' object has no attribute 'Data'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2018-09-26 20:26:38,351: 	 Executing command: 'submit'
+DEBUG 2018-09-26 20:26:38,351: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-09-26 20:26:38,358: 	 Checking credentials
+DEBUG 2018-09-26 20:26:38,359: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-09-26 20:26:38,359: 	 Getting proxy life time left
+DEBUG 2018-09-26 20:26:39,065: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 690985
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:26:39,673: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 690985
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:26:39,674: 	 Proxy valid for 191:56:25 hours
+INFO 2018-09-26 20:26:39,674: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-09-26 20:26:39,674: 	 Loading CRAB configuration file.
+ERROR 2018-09-26 20:26:39,680: 	 Error while loading CRAB configuration:
+name 'Configuration' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-09-26 20:26:39,680: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+name 'Configuration' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2018-09-26 20:27:08,272: 	 Executing command: 'submit'
+DEBUG 2018-09-26 20:27:08,272: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-09-26 20:27:08,277: 	 Checking credentials
+DEBUG 2018-09-26 20:27:08,278: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-09-26 20:27:08,278: 	 Getting proxy life time left
+DEBUG 2018-09-26 20:27:08,984: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 690956
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:27:09,694: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 690955
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:27:09,694: 	 Proxy valid for 191:55:56 hours
+INFO 2018-09-26 20:27:09,695: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-09-26 20:27:09,695: 	 Loading CRAB configuration file.
+ERROR 2018-09-26 20:27:09,700: 	 Error while loading CRAB configuration:
+'function' object has no attribute 'section_'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-09-26 20:27:09,700: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'function' object has no attribute 'section_'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2018-09-26 20:27:42,458: 	 Executing command: 'submit'
+DEBUG 2018-09-26 20:27:42,458: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-09-26 20:27:42,467: 	 Checking credentials
+DEBUG 2018-09-26 20:27:42,468: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-09-26 20:27:42,468: 	 Getting proxy life time left
+DEBUG 2018-09-26 20:27:43,474: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 690921
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:27:44,181: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 690920
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:27:44,181: 	 Proxy valid for 191:55:21 hours
+INFO 2018-09-26 20:27:44,181: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-09-26 20:27:44,181: 	 Loading CRAB configuration file.
+ERROR 2018-09-26 20:27:44,190: 	 Error while loading CRAB configuration:
+'function' object has no attribute 'section_'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-09-26 20:27:44,190: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'function' object has no attribute 'section_'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2018-09-26 20:28:15,299: 	 Executing command: 'submit'
+DEBUG 2018-09-26 20:28:15,299: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-09-26 20:28:15,306: 	 Checking credentials
+DEBUG 2018-09-26 20:28:15,307: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-09-26 20:28:15,307: 	 Getting proxy life time left
+DEBUG 2018-09-26 20:28:16,013: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 690889
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:28:16,719: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 690888
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:28:16,719: 	 Proxy valid for 191:54:49 hours
+INFO 2018-09-26 20:28:16,719: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-09-26 20:28:16,719: 	 Loading CRAB configuration file.
+ERROR 2018-09-26 20:28:16,724: 	 Error while loading CRAB configuration:
+'function' object has no attribute 'section_'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-09-26 20:28:16,724: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'function' object has no attribute 'section_'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2018-09-26 20:28:30,541: 	 Executing command: 'submit'
+DEBUG 2018-09-26 20:28:30,541: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+DEBUG 2018-09-26 20:28:30,547: 	 Checking credentials
+DEBUG 2018-09-26 20:28:30,548: 	 Found proxy file /tmp/x509up_u97569
+DEBUG 2018-09-26 20:28:30,548: 	 Getting proxy life time left
+DEBUG 2018-09-26 20:28:31,253: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -timeleft
+ output : 690873
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:28:31,959: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u97569 -actimeleft
+ output : 690873
+
+ error: 
+ retcode : 0
+DEBUG 2018-09-26 20:28:31,959: 	 Proxy valid for 191:54:33 hours
+INFO 2018-09-26 20:28:31,959: 	 Will use CRAB configuration file crabConfig_TEMPLATE.py
+DEBUG 2018-09-26 20:28:31,960: 	 Loading CRAB configuration file.
+ERROR 2018-09-26 20:28:31,998: 	 Error while loading CRAB configuration:
+'function' object has no attribute 'General'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2018-09-26 20:28:31,998: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 303, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+'function' object has no attribute 'General'
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2018-09-26 20:56:57,557: 	 Executing command: 'kill'
+DEBUG 2018-09-26 20:56:57,557: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+ERROR 2018-09-26 20:56:57,557: 	 Error: Please indicate the CRAB project directory with --dir=<project-directory>.
+ERROR 2018-09-26 20:56:57,557: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 262, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/kill.py", line 55, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 571, in validateOptions
+    raise ex
+MissingOptionException: [91mError[0m: Please indicate the CRAB project directory with --dir=<project-directory>.
+DEBUG 2018-09-26 20:57:07,144: 	 Executing command: 'kill'
+DEBUG 2018-09-26 20:57:07,144: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+ERROR 2018-09-26 20:57:07,145: 	 Error: /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXe/crab_20180926_202914/crab.log is not a valid CRAB project directory.
+ERROR 2018-09-26 20:57:07,145: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 262, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/kill.py", line 55, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 575, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: /afs/cern.ch/work/s/szhaozho/DataReEmulation/CMSSW_10_1_5/src/XeXe/crab_20180926_202914/crab.log is not a valid CRAB project directory.
+DEBUG 2018-09-27 00:56:30,481: 	 Executing command: 'kill'
+DEBUG 2018-09-27 01:00:51,274: 	 Executing command: 'kill'
+DEBUG 2018-09-27 01:00:51,274: 	 Found CRAB cache file /afs/cern.ch/user/s/szhaozho/.crab3
+ERROR 2018-09-27 01:00:51,276: 	 Error: Please indicate the CRAB project directory with --dir=<project-directory>.
+ERROR 2018-09-27 01:00:51,276: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 262, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/kill.py", line 55, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1809-comp/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 571, in validateOptions
+    raise ex
+MissingOptionException: [91mError[0m: Please indicate the CRAB project directory with --dir=<project-directory>.
