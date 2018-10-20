@@ -212,7 +212,7 @@ void PlotADCQuick(){
 			if(ADCBoth1[i] > maxADCMinus && abs(ieta[i]) > HFietaCut && ieta[i] < 0) maxADCMinus = ADCBoth1[i];
 
 		}
-		cout << "maxADC1 = " <<  maxADC1 << endl;
+		//cout << "maxADC1 = " <<  maxADC1 << endl;
 
 		for(int i = 0; i < NFG+1; i++){
 
