@@ -158,8 +158,9 @@ void PlotADCQuick(){
 
 	t->Project("h","ADCBoth");
 	h->SetMarkerColor(kRed);
-	TLegend * l = new TLegend(0.55,0.52,0.75,0.73);
-	l->AddEntry(h,Form("All ADC Distribution %s ZB Data",colsyst.Data()),"lp");
+	TLegend * l = new TLegend(0.35,0.52,0.85,0.73);
+	l->AddEntry(h,Form("All ADC Distribution %s ZB Data",colsyst.Data()));
+	l->SetTextFont(42);
 	h->Draw();
 	l->Draw("SAME");
 	b->SaveAs(Form("plots%s/Day1Task/AllZBADCDisLinear.png",colsyst.Data()));
@@ -173,16 +174,28 @@ void PlotADCQuick(){
 	t2->Project("h2","ADCBoth");
 
 	h2->SetMarkerColor(kBlue);
-	TLegend * l2 = new TLegend(0.55,0.52,0.75,0.73);
-	l2->AddEntry(h,Form("All ADC Distribution %s Empty Bunches Data",colsyst.Data()),"lp");
+	TLegend * l2 = new TLegend(0.42,0.58,0.92,0.79);
+	l2->AddEntry(h2,Form("All ADC Distribution %s Empty Bunches Data",colsyst.Data()));
+	l2->SetTextFont(42);
+
 	h2->Draw();
 	//	h2->Draw("SAME");
 	l2->Draw("SAME");
 	c->SaveAs(Form("plots%s/Day1Task/AllEMBXADCDisLinear.png",colsyst.Data()));
 	c->SetLogy();
 	c->SaveAs(Form("plots%s/Day1Task/AllEMBXADCDisLog.png",colsyst.Data()));
-	
+
 	TCanvas *d = new TCanvas("d","d",600,600);
+	h2->SetFillColor(kBlue);
+	h->SetFillColor(kRed);
+
+	h2->Draw();
+	h->Draw("SAME");
+	TLegend * l7 = new TLegend(0.42,0.58,0.92,0.79);
+	l7->AddEntry(h2,Form("All ADC Distribution %s Empty Bunches Data",colsyst.Data()));
+	l7->AddEntry(h,Form("All ADC Distribution %s Zero Bias Data",colsyst.Data()));
+	l7->SetTextFont(42);
+	l7->Draw("SAME");
 	d->cd();
 	d->SaveAs(Form("plots%s/Day1Task/AllBothADCDisLinear.png",colsyst.Data()));
 	d->SetLogy();
@@ -246,7 +259,7 @@ void PlotADCQuick(){
 
 	TCanvas *c2 = new TCanvas("c2","c2",600,600);
 	c2->cd();
-	TLegend * l3 = new TLegend(0.55,0.52,0.75,0.73);
+	TLegend * l3 = new TLegend(0.40,0.52,0.90,0.73);
 	l3->AddEntry(ADXMax1,Form("Max ADC distribution for %s ZB Data",colsyst.Data()),"lp");
 	ADXMax1->Draw();
 	l3->Draw("SAME");
@@ -256,8 +269,8 @@ void PlotADCQuick(){
 
 	TCanvas *d2 = new TCanvas("d2","d2",600,600);
 	d2->cd();
-	TLegend * l4 = new TLegend(0.55,0.52,0.75,0.73);
-	l4->AddEntry(ADXMax2,Form("Max ADC distribution for %s Empty Bunches Data",colsyst.Data()),"lp");
+	TLegend * l4 = new TLegend(0.40,0.52,0.90,0.73);
+	l4->AddEntry(ADXMax2,Form("Max ADC distribution for %s Empty Bunches Data",colsyst.Data()));
 	ADXMax2->Draw();
 	l4->Draw("SAME");
 	d2->SaveAs(Form("plots%s/Day1Task/ADCMaxEMBXLinear.png",colsyst.Data()));
@@ -266,11 +279,11 @@ void PlotADCQuick(){
 
 	TCanvas *b2 = new TCanvas("b2","b2",600,600);
 	b2->cd();
-	TLegend * l5 = new TLegend(0.55,0.52,0.75,0.73);
+	TLegend * l5 = new TLegend(0.35,0.52,0.85,0.73);
 	ADXMax1->SetFillColor(kRed);
 	ADXMax2->SetFillColor(kBlue);
 	l5->AddEntry(ADXMax1,Form("Max ADC distribution for %s ZB Data",colsyst.Data()),"lp");
-	l5->AddEntry(ADXMax2,Form("Max ADC distribution for %s Empty Bunches Data",colsyst.Data()),"lp");
+	l5->AddEntry(ADXMax2,Form("Max ADC distribution for %s Empty Bunches Data",colsyst.Data()));
 	ADXMax2->Draw();
 	ADXMax1->Draw("SAME");
 	l5->Draw("SAME");
@@ -301,27 +314,27 @@ void PlotADCQuick(){
 	TCanvas *c3 = new TCanvas("c3","c3",600,600);
 	c3->cd();
 
-	TLegend * lOR = new TLegend(0.55,0.52,0.75,0.73);
+	TLegend * lOR = new TLegend(0.35,0.52,0.85,0.73);
 	lOR->AddEntry(hOR,Form("MB OR Efficiency vs ADC Thresholds %s Data",colsyst.Data()),"lp");
 	hOR->SetMarkerStyle(21);
-	hOR->SetMarkerSize(1);
+	hOR->SetMarkerSize(1.5);
 	hOR->SetMarkerColor(kBlue);
 	hOR->Draw("p");
 	lOR->Draw("SAME");
 	c3->SaveAs(Form("plots%s/Day1Task/MBOREfficiency.png",colsyst.Data()));
 
-	TLegend * lAND = new TLegend(0.55,0.52,0.75,0.73);
+	TLegend * lAND = new TLegend(0.35,0.52,0.85,0.73);
 	lAND->AddEntry(hAND,Form("MB AND Efficiency vs ADC Thresholds %s Data",colsyst.Data()),"lp");
 	hAND->SetMarkerStyle(22);
 	hAND->SetMarkerColor(kRed);
-	hAND->SetMarkerSize(1);
+	hAND->SetMarkerSize(1.5);
 
 	hAND->Draw("p");
 	lAND->Draw("SAME");
 	c3->SaveAs(Form("plots%s/Day1Task/MBANDEfficiency.png",colsyst.Data()));
 
 
-	TLegend * lBoth = new TLegend(0.55,0.52,0.75,0.73);
+	TLegend * lBoth = new TLegend(0.35,0.52,0.85,0.73);
 
 	hOR->Draw("p");
 
