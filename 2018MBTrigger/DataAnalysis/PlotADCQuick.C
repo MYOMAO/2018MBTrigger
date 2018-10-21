@@ -279,7 +279,7 @@ void PlotADCQuick(){
 
 	TCanvas *b2 = new TCanvas("b2","b2",600,600);
 	b2->cd();
-	TLegend * l5 = new TLegend(0.35,0.60,0.85,0.81);
+	TLegend * l5 = new TLegend(0.38,0.60,0.88,0.81);
 	ADXMax1->SetFillColor(kRed);
 	ADXMax2->SetFillColor(kBlue);
 	l5->AddEntry(ADXMax1,Form("Max ADC distribution for %s ZB Data",colsyst.Data()));
