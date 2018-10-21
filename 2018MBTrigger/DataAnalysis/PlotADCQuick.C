@@ -174,7 +174,7 @@ void PlotADCQuick(){
 	t2->Project("h2","ADCBoth");
 
 	h2->SetMarkerColor(kBlue);
-	TLegend * l2 = new TLegend(0.42,0.58,0.92,0.79);
+	TLegend * l2 = new TLegend(0.42,0.58,0.88,0.79);
 	l2->AddEntry(h2,Form("All ADC Distribution %s Empty Bunches Data",colsyst.Data()));
 	l2->SetTextFont(42);
 
@@ -191,7 +191,7 @@ void PlotADCQuick(){
 
 	h2->Draw();
 	h->Draw("SAME");
-	TLegend * l7 = new TLegend(0.42,0.58,0.92,0.79);
+	TLegend * l7 = new TLegend(0.42,0.58,0.88,0.79);
 	l7->AddEntry(h2,Form("All ADC Distribution %s Empty Bunches Data",colsyst.Data()));
 	l7->AddEntry(h,Form("All ADC Distribution %s Zero Bias Data",colsyst.Data()));
 	l7->SetTextFont(42);
@@ -259,7 +259,7 @@ void PlotADCQuick(){
 
 	TCanvas *c2 = new TCanvas("c2","c2",600,600);
 	c2->cd();
-	TLegend * l3 = new TLegend(0.40,0.52,0.90,0.73);
+	TLegend * l3 = new TLegend(0.40,0.55,0.88,0.76);
 	l3->AddEntry(ADXMax1,Form("Max ADC distribution for %s ZB Data",colsyst.Data()),"lp");
 	ADXMax1->Draw();
 	l3->Draw("SAME");
@@ -269,7 +269,7 @@ void PlotADCQuick(){
 
 	TCanvas *d2 = new TCanvas("d2","d2",600,600);
 	d2->cd();
-	TLegend * l4 = new TLegend(0.40,0.52,0.90,0.73);
+	TLegend * l4 = new TLegend(0.40,0.55,0.88,0.76);
 	l4->AddEntry(ADXMax2,Form("Max ADC distribution for %s Empty Bunches Data",colsyst.Data()));
 	ADXMax2->Draw();
 	l4->Draw("SAME");
