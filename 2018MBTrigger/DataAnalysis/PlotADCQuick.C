@@ -279,10 +279,10 @@ void PlotADCQuick(){
 
 	TCanvas *b2 = new TCanvas("b2","b2",600,600);
 	b2->cd();
-	TLegend * l5 = new TLegend(0.35,0.52,0.85,0.73);
+	TLegend * l5 = new TLegend(0.35,0.60,0.85,0.81);
 	ADXMax1->SetFillColor(kRed);
 	ADXMax2->SetFillColor(kBlue);
-	l5->AddEntry(ADXMax1,Form("Max ADC distribution for %s ZB Data",colsyst.Data()),"lp");
+	l5->AddEntry(ADXMax1,Form("Max ADC distribution for %s ZB Data",colsyst.Data()));
 	l5->AddEntry(ADXMax2,Form("Max ADC distribution for %s Empty Bunches Data",colsyst.Data()));
 	ADXMax2->Draw();
 	ADXMax1->Draw("SAME");
