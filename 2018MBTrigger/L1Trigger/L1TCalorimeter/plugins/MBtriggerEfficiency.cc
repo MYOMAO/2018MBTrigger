@@ -106,6 +106,8 @@ class MBtriggerEfficiency : public edm::EDAnalyzer {
 		explicit MBtriggerEfficiency(const edm::ParameterSet&);
 		~MBtriggerEfficiency();
 
+		int doCharge = 0;
+
 		int ADCSize;
 		int ADCBoth[10000];
 		int ADCBack[10000];
@@ -156,14 +158,14 @@ class MBtriggerEfficiency : public edm::EDAnalyzer {
 		virtual void beginJob() override;
 		virtual void analyze(const edm::Event&, const edm::EventSetup&) override;
 		virtual void endJob() override;
-	// edm::Service<TFileService> fs;
+		// edm::Service<TFileService> fs;
 		virtual void beginRun(edm::Run const&, edm::EventSetup const&) override;
 		//virtual void endRun(edm::Run const&, edm::EventSetup const&) override;
 		//virtual void beginLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup const&) override;
 		//virtual void endLuminosityBlock(edm::LuminosityBlock const&, edm::EventSetup const&) override;
-		  edm::ESHandle<HcalDbService> conditions;
-		 const HcalDDDRecConstants *hcons;
-		 const HcalTopology *htopology;
+		edm::ESHandle<HcalDbService> conditions;
+		const HcalDDDRecConstants *hcons;
+		const HcalTopology *htopology;
 		// ----------member data ---------------------------
 };
 
@@ -210,17 +212,17 @@ MBtriggerEfficiency::MBtriggerEfficiency(const edm::ParameterSet& iConfig)
 	ADC->Branch("ieta",ieta,"ieta[ADCSize]/I");
 	ADC->Branch("iphi",iphi,"iphi[ADCSize]/I");
 	ADC->Branch("depth",depth,"depth[ADCSize]/I");
-/*
-  	ADC->Branch("ADCFornt",ADCFront,"ADCFront[ADCSize]/I");
-	ADC->Branch("ADCBack",ADCBack,"ADCBack[ADCSize]/I");
+	/*
+	   ADC->Branch("ADCFornt",ADCFront,"ADCFront[ADCSize]/I");
+	   ADC->Branch("ADCBack",ADCBack,"ADCBack[ADCSize]/I");
 
-	ADC->Branch("chargeSize",&chargeSize);
-	ADC->Branch("charge",charge,"charge[chargeSize]/D");
-	ADC->Branch("chargeped",chargeped,"chargeped[chargeSize]/D");
+	   ADC->Branch("chargeSize",&chargeSize);
+	   ADC->Branch("charge",charge,"charge[chargeSize]/D");
+	   ADC->Branch("chargeped",chargeped,"chargeped[chargeSize]/D");
 
-	ADC->Branch("energy",energy,"energy[chargeSize]/D");
-	ADC->Branch("energyped",energyped,"energyped[chargeSize]/D");
-*/
+	   ADC->Branch("energy",energy,"energy[chargeSize]/D");
+	   ADC->Branch("energyped",energyped,"energyped[chargeSize]/D");
+	   */
 	//  outputFile=new TFile(outfname.c_str(),"RECREATE");
 }
 
@@ -255,7 +257,7 @@ void MBtriggerEfficiency::analyze(const edm::Event& iEvent, const edm::EventSetu
 	if(!iEvent.getByToken(caloTowerTag, towers)) std::cout << "invalid caloTowerTag (not necessary)" << std::endl;
 	else std::cout << "good caloTowerTag" << std::endl;
 
-//	ESHandle<HcalDbService> conditions;
+	//	ESHandle<HcalDbService> conditions;
 	iSetup.get<HcalDbRecord>().get(conditions);
 	// double etHFtowerSumPlus = 0.0;
 	// double etHFtowerSumMinus = 0.0;
@@ -320,7 +322,7 @@ void MBtriggerEfficiency::analyze(const edm::Event& iEvent, const edm::EventSetu
 	{
 		QIE10DataFrame frame = static_cast<QIE10DataFrame>((*digi)[i]);
 		HcalDetId cell = frame.detid();
-		if(cell.subdet() != HcalForward) continue; // is HF?
+		//	if(cell.subdet() != HcalForward) continue; // is HF?
 		ieta[i] = cell.ieta();
 		depth[i] = cell.depth();
 		iphi[i] = cell.iphi();
@@ -348,37 +350,37 @@ void MBtriggerEfficiency::analyze(const edm::Event& iEvent, const edm::EventSetu
 		ADCBoth[i] = ampl;
 		ADCBack[i] = amplBack;
 		ADCFront[i] = amplFront;
+			// Reconstruct the charge, energy, etc
 
+		if(doCharge == 1){
 
+			const HcalCalibrations& calibrations(conditions->getHcalCalibrations(cell));
+			const HcalQIECoder* channelCoder = conditions->getHcalCoder(cell);
+			const HcalQIEShape* shape = conditions->getHcalShape(channelCoder);
+			const HcalCoderDb coder(*channelCoder, *shape);
+			CaloSamples tool;
+			coder.adc2fC(frame, tool);
 
-		// Reconstruct the charge, energy, etc
-		const HcalCalibrations& calibrations(conditions->getHcalCalibrations(cell));
-		const HcalQIECoder* channelCoder = conditions->getHcalCoder(cell);
-		const HcalQIEShape* shape = conditions->getHcalShape(channelCoder);
-		const HcalCoderDb coder(*channelCoder, *shape);
-		CaloSamples tool;
-		coder.adc2fC(frame, tool);
+			int soi = tool.presamples();
 
-		int soi = tool.presamples();
+			charge[i] = 0;
+			energy[i] = 0;
+			chargeped[i] = 0;
+			energyped[i] = 0;
+			chargeSize = digi->size();
 
-		charge[i] = 0;
-		energy[i] = 0;
-		chargeped[i] = 0;
-		energyped[i] = 0;
-		chargeSize = digi->size();
+			for (int ii = 0; ii < tool.size(); ii++) {
+				//	QIE10DataFrame::Sample sam = frame[ii];
+				int capid = frame[ii].capid();
+				if( ii == soi) {
+					charge[i] = (tool[ii] - calibrations.pedestal(capid));
+					energy[i] = energy[i] +  charge[i] * calibrations.respcorrgain(capid);
+					chargeped[i] = tool[ii];
+					energyped[i] = energyped[i] + chargeped[i] * calibrations.respcorrgain(capid);
+				}
 
-		for (int ii = 0; ii < tool.size(); ii++) {
-		//	QIE10DataFrame::Sample sam = frame[ii];
-			int capid = frame[ii].capid();
-			if( ii == soi) {
-				charge[i] = (tool[ii] - calibrations.pedestal(capid));
-				energy[i] = energy[i] +  charge[i] * calibrations.respcorrgain(capid);
-				chargeped[i] = tool[ii];
-				energyped[i] = energyped[i] + chargeped[i] * calibrations.respcorrgain(capid);
 			}
-
 		}
-
 
 	}
 

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 OCT 2018 18:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 OCT 2018 00:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**Day1Task.tex
-(./Day1Task.tex
+**EnergySum.tex
+(./EnergySum.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/beamer.cls
@@ -723,8 +723,8 @@ Package: beamerouterthemeinfolines 2012/10/16  (rcs-revision 51a8c72084af)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/themes/color/beamercolorth
 emebeaver.sty
 Package: beamercolorthemebeaver 2010/06/17  (rcs-revision d02a7cf4d8ae)
-)) (./Day1Task.aux)
-\openout1 = `Day1Task.aux'.
+)) (./EnergySum.aux)
+\openout1 = `EnergySum.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -819,9 +819,9 @@ LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
 
-(./Day1Task.out) (./Day1Task.out)
+(./EnergySum.out) (./EnergySum.out)
 \@outlinefile=\write5
-\openout5 = `Day1Task.out'.
+\openout5 = `EnergySum.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 4.
@@ -902,131 +902,115 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 LaTeX Info: Redefining \includegraphics on input line 4.
 
-(./Day1Task.nav) <Plots/AllEMBXADCDisLog.png, id=14, 598.235pt x 574.145pt>
-File: Plots/AllEMBXADCDisLog.png Graphic file (type png)
+(./EnergySum.nav)
+<Plots/XeXe/EnergySumHis28.png, id=14, 598.235pt x 574.145pt>
+File: Plots/XeXe/EnergySumHis28.png Graphic file (type png)
 
-<use Plots/AllEMBXADCDisLog.png>
-Package pdftex.def Info: Plots/AllEMBXADCDisLog.png used on input line 22.
+<use Plots/XeXe/EnergySumHis28.png>
+Package pdftex.def Info: Plots/XeXe/EnergySumHis28.png used on input line 18.
 (pdftex.def)             Requested size: 130.07388pt x 124.83173pt.
 
-<Plots/AllZBADCDisLog.png, id=15, 598.235pt x 574.145pt>
-File: Plots/AllZBADCDisLog.png Graphic file (type png)
+<Plots/XeXe/iETSumHisLT28.png, id=15, 598.235pt x 574.145pt>
+File: Plots/XeXe/iETSumHisLT28.png Graphic file (type png)
 
-<use Plots/AllZBADCDisLog.png>
-Package pdftex.def Info: Plots/AllZBADCDisLog.png used on input line 22.
+<use Plots/XeXe/iETSumHisLT28.png>
+Package pdftex.def Info: Plots/XeXe/iETSumHisLT28.png used on input line 18.
 (pdftex.def)             Requested size: 130.07388pt x 124.83173pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 18.
 
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 18.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
+line 18.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+)
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 22.
+(Font)              size <5> substituted on input line 18.
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Plots
-/AllEMBXADCDisLog.png> <./Plots/AllZBADCDisLog.png>]
-<Plots/ADCMaxEMBXLog.png, id=35, 598.235pt x 574.145pt>
-File: Plots/ADCMaxEMBXLog.png Graphic file (type png)
+/XeXe/EnergySumHis28.png> <./Plots/XeXe/iETSumHisLT28.png>]
+<Plots/XeXe/EnergySumHis25.png, id=27, 598.235pt x 574.145pt>
+File: Plots/XeXe/EnergySumHis25.png Graphic file (type png)
 
-<use Plots/ADCMaxEMBXLog.png>
-Package pdftex.def Info: Plots/ADCMaxEMBXLog.png used on input line 36.
+<use Plots/XeXe/EnergySumHis25.png>
+Package pdftex.def Info: Plots/XeXe/EnergySumHis25.png used on input line 28.
 (pdftex.def)             Requested size: 130.07388pt x 124.83173pt.
 
-<Plots/ADCMaxZBLog.png, id=36, 598.235pt x 574.145pt>
-File: Plots/ADCMaxZBLog.png Graphic file (type png)
+<Plots/XeXe/iETSumHisLT25.png, id=28, 598.235pt x 574.145pt>
+File: Plots/XeXe/iETSumHisLT25.png Graphic file (type png)
 
-<use Plots/ADCMaxZBLog.png>
-Package pdftex.def Info: Plots/ADCMaxZBLog.png used on input line 36.
+<use Plots/XeXe/iETSumHisLT25.png>
+Package pdftex.def Info: Plots/XeXe/iETSumHisLT25.png used on input line 28.
+(pdftex.def)             Requested size: 130.07388pt x 124.83173pt.
+ [2
+
+ <./Plots/XeXe/EnergySumHis25.png> <./Plots/XeXe/iETSumHisLT25.png>]
+<Plots/pp/iETSumHisLT25.png, id=35, 598.235pt x 574.145pt>
+File: Plots/pp/iETSumHisLT25.png Graphic file (type png)
+
+<use Plots/pp/iETSumHisLT25.png>
+Package pdftex.def Info: Plots/pp/iETSumHisLT25.png used on input line 38.
 (pdftex.def)             Requested size: 130.07388pt x 124.83173pt.
 
-Overfull \vbox (4.99109pt too high) detected at line 36
- []
+<Plots/pp/iETSumHisLT28.png, id=36, 598.235pt x 574.145pt>
+File: Plots/pp/iETSumHisLT28.png Graphic file (type png)
 
-[2
-
- <./Plots/ADCMaxEMBXLog.png> <./Plots/ADCMaxZBLog.png>]
-<Plots/AllBothADCDisLog.png, id=43, 598.235pt x 574.145pt>
-File: Plots/AllBothADCDisLog.png Graphic file (type png)
-
-<use Plots/AllBothADCDisLog.png>
-Package pdftex.def Info: Plots/AllBothADCDisLog.png used on input line 51.
-(pdftex.def)             Requested size: 130.07388pt x 124.83173pt.
-
-<Plots/ADCMaxBothLog.png, id=44, 598.235pt x 574.145pt>
-File: Plots/ADCMaxBothLog.png Graphic file (type png)
-
-<use Plots/ADCMaxBothLog.png>
-Package pdftex.def Info: Plots/ADCMaxBothLog.png used on input line 51.
+<use Plots/pp/iETSumHisLT28.png>
+Package pdftex.def Info: Plots/pp/iETSumHisLT28.png used on input line 38.
 (pdftex.def)             Requested size: 130.07388pt x 124.83173pt.
  [3
 
- <./Plots/AllBothADCDisLog.png> <./Plots/ADCMaxBothLog.png>] <Plots/MBOREfficie
-ncy.png, id=51, 598.235pt x 574.145pt>
-File: Plots/MBOREfficiency.png Graphic file (type png)
-
-<use Plots/MBOREfficiency.png>
-Package pdftex.def Info: Plots/MBOREfficiency.png used on input line 67.
-(pdftex.def)             Requested size: 130.07388pt x 124.83173pt.
-
-<Plots/MBANDEfficiency.png, id=52, 598.235pt x 574.145pt>
-File: Plots/MBANDEfficiency.png Graphic file (type png)
-
-<use Plots/MBANDEfficiency.png>
-Package pdftex.def Info: Plots/MBANDEfficiency.png used on input line 67.
-(pdftex.def)             Requested size: 130.07388pt x 124.83173pt.
- [4
-
- <./Plots/MBOREfficiency.png> <./Plots/MBANDEfficiency.png>] <Plots/MBEfficienc
-yBoth.png, id=59, 598.235pt x 574.145pt>
-File: Plots/MBEfficiencyBoth.png Graphic file (type png)
-
-<use Plots/MBEfficiencyBoth.png>
-Package pdftex.def Info: Plots/MBEfficiencyBoth.png used on input line 82.
-(pdftex.def)             Requested size: 130.07388pt x 124.83173pt.
-
-Overfull \vbox (9.39108pt too high) detected at line 82
- []
-
-[5
-
- <./Plots/MBEfficiencyBoth.png>]
+ <./Plots/pp/iETSumHisLT25.png> <./Plots/pp/iETSumHisLT28.png>]
 \tf@nav=\write6
-\openout6 = `Day1Task.nav'.
+\openout6 = `EnergySum.nav'.
 
 \tf@toc=\write7
-\openout7 = `Day1Task.toc'.
+\openout7 = `EnergySum.toc'.
 
 \tf@snm=\write8
-\openout8 = `Day1Task.snm'.
+\openout8 = `EnergySum.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
- (./Day1Task.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
-Package rerunfilecheck Info: File `Day1Task.out' has not changed.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
+ (./EnergySum.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
+Package rerunfilecheck Info: File `EnergySum.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 84.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 16532 strings out of 493089
- 319298 string characters out of 6134842
- 389354 words of memory out of 5000000
- 19624 multiletter control sequences out of 15000+600000
- 5152 words of font info for 19 fonts, out of 8000000 for 9000
+ 16495 strings out of 493089
+ 318467 string characters out of 6134842
+ 386356 words of memory out of 5000000
+ 19577 multiletter control sequences out of 15000+600000
+ 9256 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,17n,55p,425b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
+ 56i,17n,55p,426b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb>
-Output written on Day1Task.pdf (5 pages, 123960 bytes).
+Output written on EnergySum.pdf (3 pages, 103449 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 57 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
