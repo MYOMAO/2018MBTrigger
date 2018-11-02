@@ -52,7 +52,7 @@ void PlotSumEnergy(){
 	if(doPbPb == 0 ) colsyst="pp";
 
 
-	int dorecent = 1;
+	int dorecent = 2;
 	int doZB = 0;
 	int doEMBX = 1;
 	int donew = 1;
@@ -76,10 +76,16 @@ void PlotSumEnergy(){
 		fin1 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/LPUPPEMBX/L1NtupleEMBXLPUppSmaller.root", "READ");
 		fin2 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/XeXeEMBXnew/finder_XeXe_EMBX_All_AllE.root", "READ");
 	}
+	if(dorecent == 2){
+		fin1 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/PbPbMCnew/L1NtuplePbPbMCNew.root", "READ");
+		fin2 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/XeXeEMBXnew/finder_XeXe_EMBX_All_AllE.root", "READ");
+	}
+
 	TString systag;
 
 	if(dorecent == 1) systag = "LPUPP Jul 2018";
 	if(dorecent == 0) systag = "XeXe 2017";
+	if(dorecent == 2) systag = "PbPb MB MC";
 
 
 	fin1->cd();
@@ -112,8 +118,28 @@ void PlotSumEnergy(){
 	TH1D * iETSumHis[NCut]; 
 	TH1D * EnergySumHis[NCut]; 
 
+
+
+	int step = 1;
+	int ietmin = 0;
+	int ietmax;
+	if(dorecent == 1)
+	{
+		ietmax = 200;
+
+	}
+
+	if(dorecent == 2)
+	{
+		ietmax = 400;
+
+	}
+
+
+	int Niet = (ietmax - ietmin)/step;
+
 	for(int i = 0; i < NCut; i++){
-		iETSumHis[i] = new TH1D(Form("iETSumHis%d",i),Form("iETSumHis%d",i),200,0,200);
+		iETSumHis[i] = new TH1D(Form("iETSumHis%d",i),Form("iETSumHis%d",i),Niet,ietmin,ietmax);
 		iETSumHis[i]->GetXaxis()->SetTitle("iet Sum");
 		iETSumHis[i]->GetYaxis()->SetTitle("Counts");
 		iETSumHis[i]->SetTitle(Form("iet Sum for |ieta| < %d",ietaCut[i]));
