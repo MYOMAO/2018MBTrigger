@@ -345,7 +345,7 @@ void EventMatching()
 		for(int n = 0; n < ADCnTowerMatched; n++){
 
 		ietMatched[n] = int(towers_->iet);
-		cout << "iet = " <<  	towers_->iet  << endl;
+		cout << "iet = " <<  	towers_->iet  << endl;HLTEventMatching.C
 		cout << "ietMatched = " <<  	ietMatched[n]  << endl;
 		
 		}

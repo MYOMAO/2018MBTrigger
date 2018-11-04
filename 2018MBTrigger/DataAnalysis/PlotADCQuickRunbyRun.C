@@ -282,7 +282,7 @@ void PlotADCQuickRunbyRun(){
 
 	for(int i = 0 ; i < NRun2; i++){
 		ADXMax2[i] = new TH1D(Form("ADXMax2Run%d",Run2List[i]),Form("ADXMax2Run%d",Run2List[i]),80,0,80);
-		ADXMax2[i]->SetTitle(Form("Max ADC Distribution for %s Empty Bunches Data Run %d",colsyst.Data(),Run1List[i]));
+		ADXMax2[i]->SetTitle(Form("Max ADC Distribution for %s Empty Bunches Data Run %d",colsyst.Data(),Run2List[i]));
 		ADXMax2[i]->GetXaxis()->SetTitle("ADCMax");
 		ADXMax2[i]->GetYaxis()->SetTitle("Counts");
 	}
@@ -457,7 +457,7 @@ void PlotADCQuickRunbyRun(){
 			//cout << "ADCBoth = " << ADCBoth1[i] << endl;
 
 			for(int l = 0; l < NRun2; l++){
-				if(ADCBoth2[i] > maxADC2[l] && abs(ieta2[i]) > HFietaCut) maxADC2[l] = ADCBoth2[i];
+				if(ADCBoth2[i] > maxADC2[l] && abs(ieta2[i]) > HFietaCut && int(Event2_->run) == Run2List[l]) maxADC2[l] = ADCBoth2[i];
 			}
 
 		}
@@ -466,7 +466,6 @@ void PlotADCQuickRunbyRun(){
 			if(maxADC2[l] > 0) ADXMax2[l]->Fill(maxADC2[l]);
 		}
 	}
-
 
 	TCanvas *c2 = new TCanvas("c2","c2",600,600);
 	c2->cd();
