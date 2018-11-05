@@ -1,4 +1,5 @@
-	int doPbPb=2;
+	int doNewRun=1;
+	int doPbPb=1;
 	int ADCCell[4];
 	int ADCCellMax[4];
 	int FrontADCCell[4];

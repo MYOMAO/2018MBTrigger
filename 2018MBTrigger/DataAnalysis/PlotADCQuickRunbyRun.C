@@ -60,16 +60,37 @@ void PlotADCQuickRunbyRun(){
 
 	TFile *fin;
 	TFile *fin2;
+	TFile *fin3;
+	if(doNewRun==0){
+		if(doPbPb == 2){
+			fin = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/XeXeZB/L1Ntuple_XeXe_2All.root");
+			fin2 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/XeXeEMBX/Files/L1Ntuple_XeXe_All_EMBX.root");
+			fin3 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/XeXeMB/L1Ntuple_XeXe_MB.root");
+		}
 
-	if(doPbPb == 2){
-		fin = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/XeXeZB/L1Ntuple_XeXe_2All.root");
-		fin2 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/XeXeEMBX/Files/L1Ntuple_XeXe_All_EMBX.root");
+		if(doPbPb == 0){
+			fin = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/LowPUPP/L1NtupleNewPed56.root");
+			fin2 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/LPUPPEMBX/L1NtupleEMBXLPUppSmaller.root");
+		}
+
+		if(doPbPb == 1){
+			fin = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/LowPUPP/L1NtupleNewPed56.root");
+			fin2 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/LPUPPEMBX/L1NtupleEMBXLPUppSmaller.root");
+		}
 	}
 
-	if(doPbPb == 0){
-		fin = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/LowPUPP/L1NtupleNewPed56.root");
-		fin2 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/LPUPPEMBX/L1NtupleEMBXLPUppSmaller.root");
+
+	if(doNewRun==1){
+		if(doPbPb == 1){
+			fin = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/2018PbPbData/Day1/L1Ntuple2018PbPbAll.root");
+			fin2 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/2018PbPbData/Day1/L1Ntuple2018PbPbAll.root");
+			fin3 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/2018PbPbData/Day1/L1Ntuple2018PbPbAll.root");
+
+		}
+	if(doPbPb == 1 ) colsyst="2018PbPb";
+
 	}
+
 
 
 
@@ -82,10 +103,20 @@ void PlotADCQuickRunbyRun(){
 	int ieta2[10000];
 	int iphi2[10000];
 	int ADCSize2;
+
+	int ADCBoth3[10000];
+	int ieta3[10000];
+	int iphi3[10000];
+	int ADCSize3;
+
+
 	int run1;
 	int run2;
+	int run3;
+
 	std::vector<int> run1id;
 	std::vector<int> run2id;
+	std::vector<int> run3id;
 
 
 	//Begin Run ID Collection//
@@ -93,13 +124,16 @@ void PlotADCQuickRunbyRun(){
 
 	TTree * EventTree1 = (TTree*) fin->Get("l1EventTree/L1EventTree");
 	TTree * EventTree2 = (TTree*) fin2->Get("l1EventTree/L1EventTree");
+	TTree * EventTree3 = (TTree*) fin3->Get("l1EventTree/L1EventTree");
 
-	double N1= EventTree1->GetEntries();
-	double N2= EventTree2->GetEntries();
+	double N1 = EventTree1->GetEntries();
+	double N2 = EventTree2->GetEntries();
+	double N3 = EventTree2->GetEntries();
 
 
 	L1Analysis::L1AnalysisEventDataFormat *Event1_ = new L1Analysis::L1AnalysisEventDataFormat();
 	L1Analysis::L1AnalysisEventDataFormat *Event2_ = new L1Analysis::L1AnalysisEventDataFormat();
+	L1Analysis::L1AnalysisEventDataFormat *Event3_ = new L1Analysis::L1AnalysisEventDataFormat();
 
 	EventTree1->SetBranchStatus("*", 0);
 	EventTree1->SetBranchStatus("Event", 1);
@@ -117,12 +151,22 @@ void PlotADCQuickRunbyRun(){
 	EventTree2->SetBranchAddress("Event", &Event2_);
 
 
+	EventTree3->SetBranchStatus("*", 0);
+	EventTree3->SetBranchStatus("Event", 1);
+	EventTree3->SetBranchStatus("run", 1);
+	EventTree3->SetBranchStatus("lumi", 1);
+	EventTree3->SetBranchStatus("event", 1);
+	EventTree3->SetBranchAddress("Event", &Event3_);
+
+
 
 	int m = 0;
 	int n = 0;
+	int p = 0;
 	int pushed;
 	int mNE;
 	int nNE;
+	int pNE;
 	for(int j = 0; j < N1; j++)
 	{
 		if(j%10000==0) cout << "Now Working on ZB Event to Generate Run List =  " << j << endl;
@@ -158,7 +202,6 @@ void PlotADCQuickRunbyRun(){
 		}
 	}
 
-
 	for(int j = 0; j < N2; j++)
 	{
 		if(j%10000==0) cout << "Now Working on EMBX Event to Generate Run List =  " << j << endl;
@@ -189,7 +232,42 @@ void PlotADCQuickRunbyRun(){
 			}
 		}
 	}
+
+
+	for(int j = 0; j < N3; j++)
+	{
+		if(j%10000==0) cout << "Now Working on MB Event to Generate Run List =  " << j << endl;
+		EventTree3->GetEntry(j);
+		run3 =  int(Event3_->run);
+		if(p == 0){
+			run3id.push_back(run3);
+			p = p + 1;
+		}
+
+
+		pushed = 0;
+		pNE = 0;
+		if(n > 0){
+			for (std::vector<int>::iterator it = run3id.begin(); it != run3id.end(); ++it)
+			{
+				if(run3 != int(*it)) 
+				{
+					pNE = pNE + 1;
+				}
+				if(pNE > p - 1){
+					run3id.push_back(run3);
+					p = p + 1;
+					pushed = 1;
+				}
+
+				if(pushed == 1) break;
+			}
+		}
+	}
+
+
 	cout << "Total Distinct Runs ZB = " << m << endl;
+
 	const int NRun1 = m;
 	int Run1List[m];
 	int index1 = 0;
@@ -213,6 +291,20 @@ void PlotADCQuickRunbyRun(){
 		index2 = index2 + 1;
 	}
 
+	cout << "Total Distinct Runs MB = " << p << endl;
+	const int NRun3 = p;
+	int Run3List[p];
+	int index3 = 0;
+
+	for (std::vector<int>::iterator it = run3id.begin(); it != run3id.end(); ++it)
+	{
+		Run3List[index3] = int(*it);
+		cout << "index3  = " << index3 << "   Run ID = " <<  Run3List[index3] << endl;
+		index3 = index3 + 1;
+	}
+
+
+
 	//End Run ID Collection//
 
 
@@ -223,10 +315,20 @@ void PlotADCQuickRunbyRun(){
 	int Threshold[NFG+1] = {0,10,12,15,17,20,24,30,34,40};
 	const double xValue[NFG+1] = {0,10.0,12.0,15.0,17.0,20.0,24.0,30.0,34.0,40.0};
 
+	//	const int NFG = 4;
+	//	int Threshold[NFG+1] = {0,10,12,15};
+	//	const double xValue[NFG+1] = {0,10.0,12.0,15.0};
+
 	double ORPass[NFG+1][NRun1];
 	double ANDPass[NFG+1][NRun1];
 	double OReff[NFG+1][NRun1]; 
 	double ANDeff[NFG+1][NRun1]; 
+
+	double ORPass3[NFG+1][NRun3];
+	double ANDPass3[NFG+1][NRun3];
+	double OReff3[NFG+1][NRun3]; 
+	double ANDeff3[NFG+1][NRun3]; 
+
 
 	for(int l = 0; l< NRun1; l++){
 		for(int i = 0; i < NFG+1; i++){
@@ -235,22 +337,47 @@ void PlotADCQuickRunbyRun(){
 		}
 	}
 
+	for(int l = 0; l< NRun3; l++){
+		for(int i = 0; i < NFG+1; i++){
+			ORPass3[i][l]= 0;
+			ANDPass3[i][l] = 0;
+		}
+	}
+
 
 
 	TH1D * hOR[NRun1];
 	TH1D * hAND[NRun1];
 
+	TH1D * hORReal[NRun3];
+	TH1D * hANDReal[NRun3];
+
 	for(int i=0; i< NRun1; i++){
 		hOR[i]= new TH1D(Form("hORRun%d",Run1List[i]),Form("hORRun%d",Run1List[i]),NFG,xValue);
-		hOR[i]->SetTitle(Form("MB OR Trigger Efficiency vs ADC Thrshold Run %d",Run1List[i]));
+		hOR[i]->SetTitle(Form("MB OR Trigger Efficiency vs ADC Thrshold Run %d (Reemulated)",Run1List[i]));
 		hOR[i]->GetXaxis()->SetTitle("ADC Threshold");
 		hOR[i]->GetYaxis()->SetTitle("Efficiency");
 
 		hAND[i] = new TH1D(Form("hANDRun%d",Run1List[i]),Form("hANDRun%d",Run1List[i]),NFG,xValue);
-		hAND[i]->SetTitle(Form("MB AND Trigger Efficiency vs ADC Thrshold Run %d",Run1List[i]));
+		hAND[i]->SetTitle(Form("MB AND Trigger Efficiency vs ADC Thrshold Run %d (Reemulated)",Run1List[i]));
 		hAND[i]->GetXaxis()->SetTitle("ADC Threshold");
 		hAND[i]->GetYaxis()->SetTitle("Efficiency");
 	}
+
+
+
+	for(int i=0; i< NRun3; i++){
+		hORReal[i]= new TH1D(Form("hORRun%d",Run3List[i]),Form("hORRun%d",Run3List[i]),NFG,xValue);
+		hORReal[i]->SetTitle(Form("MB OR Trigger Efficiency vs ADC Thrshold Run %d",Run1List[i]));
+		hORReal[i]->GetXaxis()->SetTitle("ADC Threshold");
+		hORReal[i]->GetYaxis()->SetTitle("Efficiency");
+
+		hANDReal[i] = new TH1D(Form("hANDRun%d",Run3List[i]),Form("hANDRun%d",Run3List[i]),NFG,xValue);
+		hANDReal[i]->SetTitle(Form("MB AND Trigger Efficiency vs ADC Thrshold Run %d",Run3List[i]));
+		hANDReal[i]->GetXaxis()->SetTitle("ADC Threshold");
+		hANDReal[i]->GetYaxis()->SetTitle("Efficiency");
+	}
+
 
 	TTree * t = (TTree*) fin->Get("ADC");
 	t->SetBranchStatus("*", 1);
@@ -268,10 +395,22 @@ void PlotADCQuickRunbyRun(){
 	t2->SetBranchAddress("iphi",iphi2);
 	t2->AddFriend(EventTree2);
 
+
+	TTree * t3 = (TTree*) fin3->Get("ADC");
+	t3->SetBranchStatus("*", 1);
+	t3->SetBranchAddress("ADCSize",&ADCSize3);
+	t3->SetBranchAddress("ADCBoth",ADCBoth3);
+	t3->SetBranchAddress("ieta",ieta3);
+	t3->SetBranchAddress("iphi",iphi3);
+	t3->AddFriend(EventTree3);
+
+
+
 	//Declare ADC Max Distribution Histograms//
 
 	TH1D *ADXMax1[NRun1];
 	TH1D *ADXMax2[NRun2];
+	TH1D *ADXMax3[NRun3];
 
 	for(int i = 0 ; i < NRun1; i++){
 		ADXMax1[i] = new TH1D(Form("ADXMax1Run%d",Run1List[i]),Form("ADXMax1Run%d",Run1List[i]),80,0,80);
@@ -287,6 +426,12 @@ void PlotADCQuickRunbyRun(){
 		ADXMax2[i]->GetYaxis()->SetTitle("Counts");
 	}
 
+	for(int i = 0 ; i < NRun3; i++){
+		ADXMax3[i] = new TH1D(Form("ADXMax3Run%d",Run3List[i]),Form("ADXMax3Run%d",Run3List[i]),80,0,80);
+		ADXMax3[i]->SetTitle(Form("Max ADC Distribution for %s MB Data Run %d",colsyst.Data(),Run3List[i]));
+		ADXMax3[i]->GetXaxis()->SetTitle("ADCMax");
+		ADXMax3[i]->GetYaxis()->SetTitle("Counts");
+	}
 
 
 
@@ -304,10 +449,17 @@ void PlotADCQuickRunbyRun(){
 	h2->GetXaxis()->SetTitle("Counts");
 	h2->SetTitle(Form("All ADC Distribution for %s Empty Bunches Data",colsyst.Data()));
 
-	h->SetTitle("ADC Distribution");
-	h->GetXaxis()->SetTitle("ADC");
-	h->GetYaxis()->SetTitle("Counts");
 
+	TH1D * h3 = new TH1D("h3","h3",80,0,80);
+	h3->GetXaxis()->SetTitle("ADC");
+	h3->GetXaxis()->SetTitle("Counts");
+	h3->SetTitle(Form("All ADC Distribution for %s MB Data",colsyst.Data()));
+
+	/*
+	   h->SetTitle("ADC Distribution");
+	   h->GetXaxis()->SetTitle("ADC");
+	   h->GetYaxis()->SetTitle("Counts");
+	   */
 
 	TCanvas *b = new TCanvas("b","b",600,600);
 	b->cd();
@@ -363,6 +515,38 @@ void PlotADCQuickRunbyRun(){
 		c->SaveAs(Form("plots%s/RunbyRun/Day1Task/AllEMBXADCDisLogRun%d.png",colsyst.Data(),Run2List[i]));
 	}
 
+
+
+	TCanvas *cMB = new TCanvas("cMB","cMB",600,600);
+	cMB->cd();
+
+	for(int i = 0; i < NRun3; i++){
+		RunCuts = Form("run == %d",Run3List[i]);
+		t3->Project("h3","ADCBoth",RunCuts.Data());
+		h3->SetMarkerColor(kBlue);
+		TLegend * l2MB = new TLegend(0.42,0.58,0.88,0.79);
+		l2MB->AddEntry(h3,Form("All ADC Distribution %s MB Data",colsyst.Data()));
+		l2MB->SetTextFont(42);
+		h3->Draw();
+		//	h2->Draw("SAME");
+		l2MB->Draw("SAME");
+
+		TLatex* tex = new TLatex(0.30,0.78,Form("%s MB Run = %d",colsyst.Data(),Run2List[i]));
+		tex->SetNDC();
+		tex->SetTextFont(42);
+		tex->SetTextSize(0.04);
+		tex->SetLineWidth(2);
+		tex->Draw("same");
+
+		c->SaveAs(Form("plots%s/RunbyRun/Day1Task/AllMBADCDisLinearRun%d.png",colsyst.Data(),Run3List[i]));
+		c->SetLogy();
+		c->SaveAs(Form("plots%s/RunbyRun/Day1Task/AllMBADCDisLogRun%d.png",colsyst.Data(),Run3List[i]));
+	}
+
+
+
+
+
 	int RunBoth;
 	if(NRun2 > NRun1 || NRun2 == NRun1) RunBoth = NRun1;
 	if(NRun2 < NRun1 || NRun2 == NRun1) RunBoth = NRun2;
@@ -377,14 +561,19 @@ void PlotADCQuickRunbyRun(){
 		RunCuts = Form("run == %d",Run2List[i]);
 		t2->Project("h2","ADCBoth",RunCuts.Data());
 
+		RunCuts = Form("run == %d",Run3List[i]);
+		t3->Project("h3","ADCBoth",RunCuts.Data());
+
 		h2->SetFillColor(kBlue);
 		h->SetFillColor(kRed);
+		h3->SetFillColor(kGreen);
 
 		h2->Draw();
 		h->Draw("SAME");
 		TLegend * l7 = new TLegend(0.42,0.58,0.88,0.79);
 		l7->AddEntry(h2,Form("All ADC Distribution %s Empty Bunches Data Run = %d",colsyst.Data(),Run2List[i]));
 		l7->AddEntry(h,Form("All ADC Distribution %s Zero Bias Data Run = %d",colsyst.Data(),Run1List[i]));
+		l7->AddEntry(h3,Form("All ADC Distribution %s MB Data Run = %d",colsyst.Data(),Run3List[i]));
 		l7->SetTextFont(42);
 		l7->Draw("SAME");
 		d->cd();
@@ -393,14 +582,15 @@ void PlotADCQuickRunbyRun(){
 		d->SaveAs(Form("plots%s/RunbyRun/Day1Task/AllBothADCDisLog%d.png",colsyst.Data(),i));
 	}
 
-
+	int maxADC3[NRun3];
 	int maxADC2[NRun2];
 	int maxADC1[NRun1];
 	int maxADCPlus[NRun1];
 	int maxADCMinus[NRun1];
-
+	int maxADCPlus3[NRun3];
+	int maxADCMinus3[NRun3];
 	//	int maxADC2;
-	for(int j = 17; j < N1; j++)
+	for(int j = 0; j < N1; j++)
 	{
 		for(int i = 0; i < NRun1; i++){
 			maxADC1[i] = 0;
@@ -417,9 +607,9 @@ void PlotADCQuickRunbyRun(){
 
 		for(int i = 0; i < ADCSize1; i++)
 		{
-		//	cout << "ADCSize1 = " << ADCSize1 << "   i = " << i << "  ADCBoth = " << ADCBoth1[i] << endl;
+			//	cout << "ADCSize1 = " << ADCSize1 << "   i = " << i << "  ADCBoth = " << ADCBoth1[i] << endl;
 			for(int l = 0; l < NRun1; l++){
-			    //cout << "l = " << l << "  ADCBoth1  = " << ADCBoth1[i] << "   maxADC1 = " <<  maxADC1[l]  <<  endl;
+				//cout << "l = " << l << "  ADCBoth1  = " << ADCBoth1[i] << "   maxADC1 = " <<  maxADC1[l]  <<  endl;
 				if(ADCBoth1[i] > maxADC1[l] && abs(ieta[i]) > HFietaCut && int(Event1_->run) == Run1List[l]) maxADC1[l] = ADCBoth1[i];
 				if(ADCBoth1[i] > maxADCPlus[l] && abs(ieta[i]) > HFietaCut && ieta[i] > 0  && int(Event1_->run) == Run1List[l]) maxADCPlus[l] = ADCBoth1[i];
 				if(ADCBoth1[i] > maxADCMinus[l] && abs(ieta[i]) > HFietaCut && ieta[i] < 0  && int(Event1_->run) == Run1List[l]) maxADCMinus[l] = ADCBoth1[i];
@@ -467,6 +657,52 @@ void PlotADCQuickRunbyRun(){
 		}
 	}
 
+
+	for(int j = 0; j < N3; j++)
+	{
+		for(int i = 0; i < NRun3; i++){
+			maxADC3[i] = 0;
+			maxADCPlus3[i] = 0;
+			maxADCMinus3[i] = 0;
+		}
+
+
+		if(j%10000==0) cout << "Now Working on ZB Event =  " << j << endl;
+		t3->GetEntry(j);
+		//cout << "ADCSize = " <<  ADCSize1 << endl;
+
+		for(int i = 0; i < ADCSize3; i++)
+		{
+			//	cout << "ADCSize1 = " << ADCSize1 << "   i = " << i << "  ADCBoth = " << ADCBoth1[i] << endl;
+			for(int l = 0; l < NRun3; l++){
+				//cout << "l = " << l << "  ADCBoth1  = " << ADCBoth1[i] << "   maxADC1 = " <<  maxADC1[l]  <<  endl;
+				if(ADCBoth3[i] > maxADC3[l] && abs(ieta3[i]) > HFietaCut && int(Event3_->run) == Run3List[l]) maxADC3[l] = ADCBoth3[i];
+				if(ADCBoth3[i] > maxADCPlus3[l] && abs(ieta3[i]) > HFietaCut && ieta3[i] > 0  && int(Event3_->run) == Run3List[l]) maxADCPlus3[l] = ADCBoth3[i];
+				if(ADCBoth3[i] > maxADCMinus3[l] && abs(ieta3[i]) > HFietaCut && ieta3[i] < 0  && int(Event3_->run) == Run3List[l]) maxADCMinus3[l] = ADCBoth3[i];
+			}
+
+		}
+		//cout << "maxADC1 = " <<  maxADC1 << endl;
+
+		for(int i = 0; i < NFG+1; i++){
+			for(int l = 0; l < NRun3; l++){
+
+				if(maxADC3[l] > Threshold[i] - 1) ORPass3[i][l] = ORPass3[i][l] + 1;
+				if(maxADCPlus3[l] > Threshold[i] - 1 && maxADCMinus3[l] > Threshold[i] - 1) ANDPass3[i][l] = ANDPass3[i][l] + 1;
+			}
+
+		}
+
+		for(int l = 0; l < NRun3; l++){
+			if(maxADC3[l] > 0) ADXMax3[l]->Fill(maxADC3[l]);
+		}
+
+	}
+
+
+
+
+
 	TCanvas *c2 = new TCanvas("c2","c2",600,600);
 	c2->cd();
 
@@ -512,6 +748,30 @@ void PlotADCQuickRunbyRun(){
 
 	}
 
+
+	TCanvas *e2 = new TCanvas("e2","e2",600,600);
+	e2->cd();
+
+	for(int i = 0; i < NRun3; i++){
+		TLegend * l31 = new TLegend(0.40,0.55,0.88,0.76);
+		l31->AddEntry(ADXMax3[i],Form("Max ADC distribution for %s MB Data",colsyst.Data()),"lp");
+		ADXMax3[i]->Draw();
+		l31->Draw("SAME");
+
+
+		TLatex* tex = new TLatex(0.30,0.78,Form("%s MB Run = %d",colsyst.Data(),Run3List[i]));
+		tex->SetNDC();
+		tex->SetTextFont(42);
+		tex->SetTextSize(0.04);
+		tex->SetLineWidth(2);
+		tex->Draw("same");
+
+		e2->SaveAs(Form("plots%s/RunbyRun/Day1Task/ADCMaxMBLinearRun%d.png",colsyst.Data(),Run3List[i]));
+		e2->SetLogy();
+		e2->SaveAs(Form("plots%s/RunbyRun/Day1Task/ADCMaxMBLogRun%d.png",colsyst.Data(),Run3List[i]));
+	}
+
+
 	TCanvas *b2 = new TCanvas("b2","b2",600,600);
 	b2->cd();
 
@@ -519,10 +779,13 @@ void PlotADCQuickRunbyRun(){
 		TLegend * l5 = new TLegend(0.38,0.65,0.88,0.81);
 		ADXMax1[i]->SetFillColor(kRed);
 		ADXMax2[i]->SetFillColor(kBlue);
+		ADXMax3[i]->SetFillColor(kGreen);
+
 		l5->AddEntry(ADXMax1[i],Form("Max ADC distribution for %s ZB Data",colsyst.Data()));
 		l5->AddEntry(ADXMax2[i],Form("Max ADC distribution for %s Empty Bunches Data",colsyst.Data()));
+		l5->AddEntry(ADXMax3[i],Form("Max ADC distribution for %s MB Data",colsyst.Data()));
 
-		TLatex* tex = new TLatex(0.24,0.78,Form("%s ZB Run = %d and EMBX Run = %d",colsyst.Data(),Run1List[i],Run2List[i]));
+		TLatex* tex = new TLatex(0.24,0.78,Form("%s ZB Run = %d, EMBX Run = %d, and MB Run = %d",colsyst.Data(),Run1List[i],Run2List[i],Run3List[i]));
 		tex->SetNDC();
 		tex->SetTextFont(42);
 		tex->SetTextSize(0.04);
@@ -531,6 +794,8 @@ void PlotADCQuickRunbyRun(){
 
 		ADXMax2[i]->Draw();
 		ADXMax1[i]->Draw("SAME");
+		ADXMax3[i]->Draw("SAME");
+
 		l5->Draw("SAME");
 		b2->SaveAs(Form("plots%s/RunbyRun/Day1Task/ADCMaxBothLinearRun%d.png",colsyst.Data(),i));
 		b2->SetLogy();
@@ -539,24 +804,58 @@ void PlotADCQuickRunbyRun(){
 
 	for(int l = 0; l < NRun1; l++){
 		for(int i = 0; i < NFG+1; i ++){
-			OReff[i][l] =  ORPass[i][l]/N1;
-			ANDeff[i][l] =  ANDPass[i][l]/N1;
+			OReff[i][l] =  ORPass[i][l]/ORPass[0][l];
+			ANDeff[i][l] =  ANDPass[i][l]/ORPass[0][l];
 			ofstream out1(Form("datFiles%s/RunbyRun/Info%dORRun%d.dat",colsyst.Data(),i,Run1List[l]));
+			cout << "RUNID = " << Run1List[l] << endl;
 			cout << "ADC OR Thrshold  =  " << Threshold[i] << endl;
 			cout << "Total ZB Events =  " << N1 << endl;
-			cout << "NEvents Passing MB OR Trigger = " << ORPass[i] << endl;
-			cout << "MB OR Efficiency = " << OReff[i] << endl;
+			cout << "Total ZB Events For Run =  " << ORPass[0][l] << endl;
+			cout << "NEvents Passing MB OR Trigger (Reemulated) = " << ORPass[i][l] << endl;
+			cout << "MB OR Efficiency = " << OReff[i][l] << endl;
 
 			ofstream out2(Form("datFiles%s/RunbyRun/Info%dANDRun%d.dat",colsyst.Data(),i,Run1List[l]));
+			cout << "RUNID = " << Run1List[l] << endl;
 			cout << "ADC AND Thrshold  =  " << Threshold[i] << endl;
 			cout << "Total ZB Events =  " << N1 << endl;
-			cout << "NEvents Passing MB AND Trigger = " << ANDPass[i] << endl;
-			cout << "MB AND Efficiency = " << ANDeff[i] << endl;	
+			cout << "Total ZB Events For Run =  " << ANDPass[0][l] << endl;
+			cout << "NEvents Passing MB AND Trigger (Reemulated)  = " << ANDPass[i][l] << endl;
+			cout << "MB AND Efficiency = " << ANDeff[i][l] << endl;	
 
 			hOR[l]->SetBinContent(i+1,OReff[i][l]);
 			hAND[l]->SetBinContent(i+1,ANDeff[i][l]);
 		}
 	}
+
+
+	for(int l = 0; l < NRun3; l++){
+		for(int i = 0; i < NFG+1; i ++){
+			//			OReff3[i][l] =  ORPass3[i][l]/ORPass[0][l];
+			//			ANDeff3[i][l] =  ANDPass3[i][l]/ANDPass[0][l];
+			OReff3[i][l] =  ORPass3[i][l]/N1;
+			ANDeff3[i][l] =  ANDPass3[i][l]/N1;
+
+			ofstream out1(Form("datFiles%s/RunbyRun/Info%dORRun%dReal.dat",colsyst.Data(),i,Run3List[l]));
+			cout << "RUNID = " << Run3List[l] << endl;
+			cout << "ADC OR Thrshold  =  " << Threshold[i] << endl;
+			cout << "Total ZB Events =  " << N1 << endl;
+			cout << "Total ZB Events For Run =  " << ORPass[0][l] << endl;
+			cout << "NEvents Passing MB OR Trigger (Real) = " << ORPass3[i][l] << endl;
+			cout << "MB OR Efficiency = " << OReff3[i][l] << endl;
+
+			ofstream out2(Form("datFiles%s/RunbyRun/Info%dANDRun%dReal.dat",colsyst.Data(),i,Run3List[l]));
+			cout << "RUNID = " << Run3List[l] << endl;
+			cout << "ADC AND Thrshold  =  " << Threshold[i] << endl;
+			cout << "Total ZB Events =  " << N1 << endl;
+			cout << "Total ZB Events For Run =  " << ANDPass[0][l] << endl;
+			cout << "NEvents Passing MB AND Trigger (Real) = " << ANDPass3[i][l] << endl;
+			cout << "MB AND Efficiency = " << ANDeff3[i][l] << endl;	
+
+			hORReal[l]->SetBinContent(i+1,OReff3[i][l]);
+			hANDReal[l]->SetBinContent(i+1,ANDeff3[i][l]);
+		}
+	}
+
 
 
 
@@ -565,7 +864,7 @@ void PlotADCQuickRunbyRun(){
 
 	for(int i = 0; i < NRun1; i++){
 		TLegend * lOR = new TLegend(0.35,0.52,0.85,0.73);
-		lOR->AddEntry(hOR[i],Form("MB OR Efficiency vs ADC Thresholds %s Data",colsyst.Data()),"lp");
+		lOR->AddEntry(hOR[i],Form("MB OR Efficiency vs ADC Thresholds %s Data (Reemulated)",colsyst.Data()),"lp");
 
 		hOR[i]->SetMarkerStyle(21);
 		hOR[i]->SetMarkerSize(1.5);
@@ -585,13 +884,13 @@ void PlotADCQuickRunbyRun(){
 
 	for(int i = 0; i < NRun1; i++){
 		TLegend * lAND = new TLegend(0.35,0.52,0.85,0.73);
-		lAND->AddEntry(hAND[i],Form("MB AND Efficiency vs ADC Thresholds %s Data",colsyst.Data()),"lp");
+		lAND->AddEntry(hAND[i],Form("MB AND Efficiency vs ADC Thresholds %s Data (Reemulated)",colsyst.Data()),"lp");
 		hAND[i]->SetMarkerStyle(22);
 		hAND[i]->SetMarkerColor(kRed);
 		hAND[i]->SetMarkerSize(1.5);
 		hAND[i]->Draw("p");
 
-		TLatex* tex = new TLatex(0.30,0.78,Form("%s ZB Run = %d",colsyst.Data(),Run1List[i]));
+		TLatex* tex = new TLatex(0.30,0.78,Form("%s ZB Run = %d (Reemulated)",colsyst.Data(),Run1List[i]));
 		tex->SetNDC();
 		tex->SetTextFont(42);
 		tex->SetTextSize(0.04);
@@ -617,18 +916,87 @@ void PlotADCQuickRunbyRun(){
 		tex->Draw("same");
 
 
-		lBoth->AddEntry(hOR[i],Form("MB OR Efficiency vs ADC Thresholds %s Data",colsyst.Data()),"lp");
-		lBoth->AddEntry(hAND[i],Form("MB AND Efficiency vs ADC Thresholds %s Data",colsyst.Data()),"lp");
+		lBoth->AddEntry(hOR[i],Form("MB OR Efficiency vs ADC Thresholds %s Data (Reemulated)",colsyst.Data()),"lp");
+		lBoth->AddEntry(hAND[i],Form("MB AND Efficiency vs ADC Thresholds %s Data (Reemulated)",colsyst.Data()),"lp");
 		lBoth->Draw("SAME");
 
 		c3->SaveAs(Form("plots%s/RunbyRun/Day1Task/MBEfficiencyBothRun%d.png",colsyst.Data(),Run1List[i]));
 	}
 
 
+
+
+	TCanvas *c3MB = new TCanvas("c3MB","c3MB",600,600);
+	c3MB->cd();
+
+	for(int i = 0; i < NRun3; i++){
+		TLegend * lORMB = new TLegend(0.35,0.52,0.85,0.73);
+		lORMB->AddEntry(hORReal[i],Form("MB OR Efficiency vs ADC Thresholds %s Data",colsyst.Data()),"lp");
+
+		hORReal[i]->SetMarkerStyle(21);
+		hORReal[i]->SetMarkerSize(1.5);
+		hORReal[i]->SetMarkerColor(kBlue);
+		hORReal[i]->Draw("p");
+
+		TLatex* tex = new TLatex(0.30,0.78,Form("%s MB Run = %d",colsyst.Data(),Run3List[i]));
+		tex->SetNDC();
+		tex->SetTextFont(42);
+		tex->SetTextSize(0.04);
+		tex->SetLineWidth(2);
+		tex->Draw("same");
+
+		lORMB->Draw("SAME");
+		c3MB->SaveAs(Form("plots%s/RunbyRun/Day1Task/MBRealOREfficiencyRun%d.png",colsyst.Data(),Run3List[i]));
+	}
+
+	for(int i = 0; i < NRun3; i++){
+		TLegend * lANDMB = new TLegend(0.35,0.52,0.85,0.73);
+		lANDMB->AddEntry(hANDReal[i],Form("MB AND Efficiency vs ADC Thresholds %s Data",colsyst.Data()),"lp");
+		hANDReal[i]->SetMarkerStyle(22);
+		hANDReal[i]->SetMarkerColor(kRed);
+		hANDReal[i]->SetMarkerSize(1.5);
+		hANDReal[i]->Draw("p");
+
+		TLatex* tex = new TLatex(0.30,0.78,Form("%s MB Run = %d",colsyst.Data(),Run3List[i]));
+		tex->SetNDC();
+		tex->SetTextFont(42);
+		tex->SetTextSize(0.04);
+		tex->SetLineWidth(2);
+		tex->Draw("same");
+
+
+		lANDMB->Draw("SAME");
+		c3MB->SaveAs(Form("plots%s/RunbyRun/Day1Task/MBRealANDEfficiencyRun%d.png",colsyst.Data(),Run3List[i]));
+	}
+
+	for(int i = 0; i < NRun3; i++){
+		TLegend * lBoth = new TLegend(0.35,0.52,0.85,0.73);
+		hORReal[i]->Draw("p");
+		hANDReal[i]->Draw("pSAME");
+
+
+		TLatex* tex = new TLatex(0.30,0.78,Form("%s MB Run = %d",colsyst.Data(),Run3List[i]));
+		tex->SetNDC();
+		tex->SetTextFont(42);
+		tex->SetTextSize(0.04);
+		tex->SetLineWidth(2);
+		tex->Draw("same");
+
+
+		lBoth->AddEntry(hORReal[i],Form("MB OR Efficiency vs ADC Thresholds %s Data",colsyst.Data()),"lp");
+		lBoth->AddEntry(hANDReal[i],Form("MB AND Efficiency vs ADC Thresholds %s Data",colsyst.Data()),"lp");
+		lBoth->Draw("SAME");
+
+		c3MB->SaveAs(Form("plots%s/RunbyRun/Day1Task/MBRealEfficiencyBothRun%d.png",colsyst.Data(),Run3List[i]));
+	}
+
+
+
 	TFile * fout = new TFile(Form("Day1Task%sData.root",colsyst.Data()),"RECREATE");
 	fout->cd();
 	h->Write();
 	h2->Write();
+	h3->Write();
 
 	for(int i = 0; i < NRun1; i++){
 		ADXMax1[i]->Write();
@@ -639,6 +1007,13 @@ void PlotADCQuickRunbyRun(){
 	for(int i = 0; i < NRun2; i++){
 		ADXMax2[i]->Write();
 	}
+
+	for(int i = 0; i < NRun3; i++){
+		ADXMax3[i]->Write();
+		hORReal[i]->Write();
+		hANDReal[i]->Write();
+	}
+
 
 	fout->Close();
 

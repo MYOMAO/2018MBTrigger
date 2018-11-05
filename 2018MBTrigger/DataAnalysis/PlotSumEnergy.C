@@ -52,7 +52,7 @@ void PlotSumEnergy(){
 	if(doPbPb == 0 ) colsyst="pp";
 
 
-	int dorecent = 2;
+	int dorecent = 3;
 	int doZB = 0;
 	int doEMBX = 1;
 	int donew = 1;
@@ -81,11 +81,18 @@ void PlotSumEnergy(){
 		fin2 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/XeXeEMBXnew/finder_XeXe_EMBX_All_AllE.root", "READ");
 	}
 
+	if(dorecent == 3){
+		fin1 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/2018PbPbData/Day1/L1Ntuple2018PbPbAll.root", "READ");
+		fin2 = new TFile("/export/d00/scratch/zzshi/CMSSW_7_5_8_patch3/Merge/MBTrigger/XeXeEMBXnew/finder_XeXe_EMBX_All_AllE.root", "READ");
+	if(doPbPb == 1 ) colsyst="2018PbPb";
+
+	}
 	TString systag;
 
 	if(dorecent == 1) systag = "LPUPP Jul 2018";
 	if(dorecent == 0) systag = "XeXe 2017";
 	if(dorecent == 2) systag = "PbPb MB MC";
+	if(dorecent == 3) systag = "PbPb Run 2018";
 
 
 	fin1->cd();
@@ -120,7 +127,7 @@ void PlotSumEnergy(){
 
 
 
-	int step = 1;
+	int step = 10;
 	int ietmin = 0;
 	int ietmax;
 	if(dorecent == 1)
@@ -134,6 +141,13 @@ void PlotSumEnergy(){
 		ietmax = 400;
 
 	}
+
+	if(dorecent == 3)
+	{
+		ietmax = 1500;
+
+	}
+
 
 
 	int Niet = (ietmax - ietmin)/step;

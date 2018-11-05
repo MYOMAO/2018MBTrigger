@@ -82285,7 +82285,7 @@ process.jetGlobalReco = cms.Sequence(process.recoJets+process.recoJetIds+process
 process.muonPFIsolationSequence = cms.Sequence(process.muonPFIsolationTask)
 
 
-process.L1NtupleEMU = cms.Sequence(process.l1EventTree+process.l1UpgradeTfMuonEmuTree+process.l1CaloTowerEmuTree+process.l1UpgradeEmuTree+process.l1uGTEmuTree)
+#process.L1NtupleEMU = cms.Sequence(process.l1EventTree+process.l1UpgradeTfMuonEmuTree+process.l1CaloTowerEmuTree+process.l1UpgradeEmuTree+process.l1uGTEmuTree)
 
 
 process.muontracking = cms.Sequence(process.muontrackingTask)
@@ -82316,7 +82316,7 @@ process.muonSeededStepDebug = cms.Sequence(process.muonSeededStepDebugTask)
 
 
 process.L1NtupleRAW = cms.Sequence(process.l1EventTree+process.l1CaloTowerTree+process.l1UpgradeTfMuonTree+process.l1UpgradeTree+process.l1uGTTree+process.l1HOTree)
-
+#process.L1NtupleRAW = cms.Sequence(process.l1EventTree)
 
 process.ak4CaloL2L3CorrectorChain = cms.Sequence(process.ak4CaloL2L3CorrectorTask)
 
@@ -82566,11 +82566,14 @@ process.l1ntupleemu = cms.Path(process.L1NtupleEMU)
 process.l1CustomReco = cms.Path(process.ak4PFCHSL1FastL2L3ResidualCorrectorChain+process.ak4CaloL1FastL2L3ResidualCorrectorChain+process.correctionTermsPfMetType1Type2+process.pfMetT1+process.egmGsfElectronIDSequence+process.BadPFMuonFilter+process.BadChargedCandidateFilter)
 
 
-#process.l1ntupleaod = cms.Path(process.L1NtupleAOD)
+process.l1ntupleaod = cms.Path(process.L1NtupleAOD)
 
 
 process.endjob_step = cms.EndPath(process.endOfProcess)
 
 
 process.schedule = cms.Schedule(*[ process.raw2digi_step, process.endjob_step, process.L1TReEmulPath, process.l1ntupleraw, process.l1ntupleemu ], tasks=[process.patAlgosToolsTask])
+
+#process.schedule = cms.Schedule(*[ process.raw2digi_step, process.endjob_step, process.L1TReEmulPath, process.l1ntupleraw], tasks=[process.patAlgosToolsTask])
+
 
