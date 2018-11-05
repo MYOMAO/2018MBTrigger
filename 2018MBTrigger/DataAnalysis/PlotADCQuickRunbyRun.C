@@ -830,10 +830,10 @@ void PlotADCQuickRunbyRun(){
 
 	for(int l = 0; l < NRun3; l++){
 		for(int i = 0; i < NFG+1; i ++){
-			//			OReff3[i][l] =  ORPass3[i][l]/ORPass[0][l];
-			//			ANDeff3[i][l] =  ANDPass3[i][l]/ANDPass[0][l];
-			OReff3[i][l] =  ORPass3[i][l]/N1;
-			ANDeff3[i][l] =  ANDPass3[i][l]/N1;
+			OReff3[i][l] =  ORPass3[i][l]/ORPass[0][l];
+			ANDeff3[i][l] =  ANDPass3[i][l]/ANDPass[0][l];
+			//OReff3[i][l] =  ORPass3[i][l]/N1;
+			//ANDeff3[i][l] =  ANDPass3[i][l]/N1;
 
 			ofstream out1(Form("datFiles%s/RunbyRun/Info%dORRun%dReal.dat",colsyst.Data(),i,Run3List[l]));
 			cout << "RUNID = " << Run3List[l] << endl;
