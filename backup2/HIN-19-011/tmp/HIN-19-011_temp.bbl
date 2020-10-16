@@ -1,0 +1,426 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}%
+\makeatletter
+\providecommand{\hrefCMSnoop }[0]{\@secondoftwo}%
+\makeatother
+\providecommand{\doi}{\texttt{doi:}\begingroup \urlstyle{tt}\Url}
+
+\bibitem{QGP1}
+\href {http://www.jetp.ac.ru/cgi-bin/e/index/e/47/2/p212?a=list}{{\'E}.~V.
+  Shuryak, ``Theory of hadronic plasma'',} \textit{ Sov. Phys. JETP} \textbf{
+  47} (1978)
+212.
+%%CITATION = SPHJA,47,212;%%.
+
+\bibitem{QGP2}
+\hrefCMSnoop {}{J.~C. Collins and M.~J. Perry, ``Superdense matter: neutrons or
+  asymptotically free quarks?'',} \textit{ Phys. Rev. Lett.} \textbf{ 34}
+  (1975) 1353,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.34.1353}{\doi{10.1103/PhysRevLett.34.1353}}.
+
+\bibitem{Karsch:2003jg}
+\hrefCMSnoop {}{F.~Karsch and E.~Laermann, ``Thermodynamics and in-medium
+  hadron properties from lattice {QCD}'',} in \textit{ Quark-Gluon Plasma III,
+  R. Hwa (ed.), \textnormal{2003}}.
+\newblock 2003.
+\newblock
+\href{http://www.arXiv.org/abs/hep-lat/0305025}{\texttt{arXiv:hep-lat/0305025}}.
+\newblock
+%%CITATION = HEP-LAT/0305025;%%.
+
+\bibitem{Andronic:2015wma}
+\hrefCMSnoop {}{A.~Andronic {et~al.}, ``Heavy-flavour and quarkonium production
+  in the {LHC} era: from proton-proton to heavy-ion collisions'',} \textit{
+  Eur. Phys. J. C} \textbf{ 76} (2016) 107,
+  \href{http://dx.doi.org/10.1140/epjc/s10052-015-3819-5}{\doi{10.1140/epjc/s10052-015-3819-5}},
+\href{http://www.arXiv.org/abs/1506.03981}{\texttt{arXiv:1506.03981}}.
+%%CITATION = ARXIV:1506.03981;%%.
+
+\bibitem{Dong:2019byy}
+\hrefCMSnoop {}{X.~Dong, Y.-J. Lee, and R.~Rapp, ``{Open Heavy-Flavor
+  Production in Heavy-Ion Collisions}'',}
+\href{http://www.arXiv.org/abs/1903.07709}{\texttt{arXiv:1903.07709}}.
+%%CITATION = ARXIV:1903.07709;%%.
+
+\bibitem{Eloss1}
+\href {http://lss.fnal.gov/archive/1982/pub/Pub-82-059-T.pdf}{J.~D. Bjorken,
+  ``Energy loss of energetic partons in quark-gluon plasma: possible extinction
+  of high $\pt$ jets in hadron-hadron collisions'',} Fermilab PUB 82-059-THY,
+  1982.
+
+\bibitem{Baier:2000mf}
+\hrefCMSnoop {}{R.~Baier, D.~Schiff, and B.~G. Zakharov, ``Energy loss in
+  perturbative {QCD}'',} \textit{ Ann. Rev. Nucl. Part. Sci.} \textbf{ 50}
+  (2000) 37,
+  \href{http://dx.doi.org/10.1146/annurev.nucl.50.1.37}{\doi{10.1146/annurev.nucl.50.1.37}},
+\href{http://www.arXiv.org/abs/hep-ph/0002198}{\texttt{arXiv:hep-ph/0002198}}.
+%%CITATION = HEP-PH/0002198;%%.
+
+\bibitem{Chatrchyan:2011sx}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Observation and studies of jet quenching
+  in {PbPb} collisions at {$\sqrtsNN =2.76 \TeV$}'',} \textit{ Phys. Rev. C}
+  \textbf{ 84} (2011) 024906,
+  \href{http://dx.doi.org/10.1103/PhysRevC.84.024906}{\doi{10.1103/PhysRevC.84.024906}},
+\href{http://www.arXiv.org/abs/1102.1957}{\texttt{arXiv:1102.1957}}.
+%%CITATION = ARXIV:1102.1957;%%.
+
+\bibitem{Aad:2010bu}
+\hrefCMSnoop {}{{ATLAS} Collaboration, ``Observation of a centrality-dependent
+  dijet asymmetry in lead-lead collisions at {$\sqrtsNN =2.76 \TeV$} with the
+  {ATLAS} detector at the {LHC}'',} \textit{ Phys. Rev. Lett.} \textbf{ 105}
+  (2010) 252303,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.105.252303}{\doi{10.1103/PhysRevLett.105.252303}},
+\href{http://www.arXiv.org/abs/1011.6182}{\texttt{arXiv:1011.6182}}.
+%%CITATION = ARXIV:1011.6182;%%.
+
+\bibitem{Rapp:2018qla}
+\hrefCMSnoop {}{A.~Beraudo {et~al.}, ``{Extraction of Heavy-Flavor Transport
+  Coefficients in QCD Matter}'',} \textit{ Nucl. Phys. A} \textbf{ 979} (2018)
+  21,
+  \href{http://dx.doi.org/10.1016/j.nuclphysa.2018.09.002}{\doi{10.1016/j.nuclphysa.2018.09.002}},
+\href{http://www.arXiv.org/abs/1803.03824}{\texttt{arXiv:1803.03824}}.
+%%CITATION = ARXIV:1803.03824;%%.
+
+\bibitem{ALICE:2017jyt}
+\hrefCMSnoop {}{{ALICE} Collaboration, ``Enhanced production of multi-strange
+  hadrons in high-multiplicity proton-proton collisions'',} \textit{ Nature
+  Phys.} \textbf{ 13} (2017) 535,
+  \href{http://dx.doi.org/10.1038/nphys4111}{\doi{10.1038/nphys4111}},
+\href{http://www.arXiv.org/abs/1606.07424}{\texttt{arXiv:1606.07424}}.
+%%CITATION = ARXIV:1606.07424;%%.
+
+\bibitem{Abelev:2013xaa}
+\hrefCMSnoop {}{{ALICE} Collaboration, ``{$K^0_S$ and $\Lambda$ production in
+  Pb-Pb collisions at $\sqrt{s_{NN}}$ = 2.76 TeV}'',} \textit{ Phys. Rev.
+  Lett.} \textbf{ 111} (2013) 222301,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.111.222301}{\doi{10.1103/PhysRevLett.111.222301}},
+\href{http://www.arXiv.org/abs/1307.5530}{\texttt{arXiv:1307.5530}}.
+%%CITATION = ARXIV:1307.5530;%%.
+
+\bibitem{Agakishiev:2011ar}
+\hrefCMSnoop {}{{STAR} Collaboration, ``Strangeness enhancement in {Cu+Cu} and
+  {Au+Au} collisions at {$\sqrtsNN = 200$ GeV}'',} \textit{ Phys. Rev. Lett.}
+  \textbf{ 108} (2012) 072301,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.108.072301}{\doi{10.1103/PhysRevLett.108.072301}},
+\href{http://www.arXiv.org/abs/1107.2955}{\texttt{arXiv:1107.2955}}.
+%%CITATION = ARXIV:1107.2955;%%.
+
+\bibitem{Abelev:2008zk}
+\hrefCMSnoop {}{{STAR} Collaboration, ``Energy and system size dependence of
+  phi meson production in {Cu+Cu} and {Au+Au} collisions'',} \textit{ Phys.
+  Lett. B} \textbf{ 673} (2009) 183,
+  \href{http://dx.doi.org/10.1016/j.physletb.2009.02.037}{\doi{10.1016/j.physletb.2009.02.037}},
+\href{http://www.arXiv.org/abs/0810.4979}{\texttt{arXiv:0810.4979}}.
+%%CITATION = ARXIV:0810.4979;%%.
+
+\bibitem{Arsene:2009jg}
+\hrefCMSnoop {}{{BRAHMS} Collaboration, ``Kaon and pion production in central
+  {Au+Au} collisions at {$\sqrtsNN = 62.4$\GeV}'',} \textit{ Phys. Lett. B}
+  \textbf{ 687} (2010) 36,
+  \href{http://dx.doi.org/10.1016/j.physletb.2010.02.078}{\doi{10.1016/j.physletb.2010.02.078}},
+\href{http://www.arXiv.org/abs/0911.2586}{\texttt{arXiv:0911.2586}}.
+%%CITATION = ARXIV:0911.2586;%%.
+
+\bibitem{Adamczyk:2017wsl}
+\hrefCMSnoop {}{{STAR} Collaboration, ``Collision energy dependence of moments
+  of net-kaon multiplicity distributions at {RHIC}'',} \textit{ Phys. Lett. B}
+  \textbf{ 785} (2018) 551,
+  \href{http://dx.doi.org/10.1016/j.physletb.2018.07.066}{\doi{10.1016/j.physletb.2018.07.066}},
+\href{http://www.arXiv.org/abs/1709.00773}{\texttt{arXiv:1709.00773}}.
+%%CITATION = ARXIV:1709.00773;%%.
+
+\bibitem{Adare:2015ema}
+\hrefCMSnoop {}{{PHENIX} Collaboration, ``{$\phi$ meson production in the
+  forward/backward rapidity region in Cu$+$Au collisions at $\sqrtsNN=200$
+  GeV}'',} \textit{ Phys. Rev. C} \textbf{ 93} (2016) 024904,
+  \href{http://dx.doi.org/10.1103/PhysRevC.93.024904}{\doi{10.1103/PhysRevC.93.024904}},
+\href{http://www.arXiv.org/abs/1509.06337}{\texttt{arXiv:1509.06337}}.
+%%CITATION = ARXIV:1509.06337;%%.
+
+\bibitem{PhysRevLett.48.1066}
+\hrefCMSnoop {}{J.~Rafelski and B.~M{\"u}ller, ``{Strangeness Production in the
+  Quark - Gluon Plasma}'',} \textit{ Phys. Rev. Lett.} \textbf{ 48} (1982)
+  1066,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.48.1066}{\doi{10.1103/PhysRevLett.48.1066}}.
+[Erratum: \DOI{10.1103/PhysRevLett.56.2334}].
+%%CITATION = PRLTA,48,1066;%%.
+
+\bibitem{Molnar:2003ff}
+\hrefCMSnoop {}{D.~Molnar and S.~A. Voloshin, ``Elliptic flow at large
+  transverse momenta from quark coalescence'',} \textit{ Phys. Rev. Lett.}
+  \textbf{ 91} (2003) 092301,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.91.092301}{\doi{10.1103/PhysRevLett.91.092301}},
+\href{http://www.arXiv.org/abs/nucl-th/0302014}{\texttt{arXiv:nucl-th/0302014}}.
+%%CITATION = NUCL-TH/0302014;%%.
+
+\bibitem{Greco:2003mm}
+\hrefCMSnoop {}{V.~Greco, C.~M. Ko, and P.~Levai, ``Parton coalescence at
+  {RHIC}'',} \textit{ Phys. Rev. C} \textbf{ 68} (2003) 034904,
+  \href{http://dx.doi.org/10.1103/PhysRevC.68.034904}{\doi{10.1103/PhysRevC.68.034904}},
+\href{http://www.arXiv.org/abs/nucl-th/0305024}{\texttt{arXiv:nucl-th/0305024}}.
+%%CITATION = NUCL-TH/0305024;%%.
+
+\bibitem{Greco:2003vf}
+\hrefCMSnoop {}{V.~Greco, C.~M. Ko, and R.~Rapp, ``Quark coalescence for
+  charmed mesons in ultrarelativistic heavy ion collisions'',} \textit{ Phys.
+  Lett. B} \textbf{ 595} (2004) 202,
+  \href{http://dx.doi.org/10.1016/j.physletb.2004.06.064}{\doi{10.1016/j.physletb.2004.06.064}},
+\href{http://www.arXiv.org/abs/nucl-th/0312100}{\texttt{arXiv:nucl-th/0312100}}.
+%%CITATION = NUCL-TH/0312100;%%.
+
+\bibitem{He:2014cla}
+\hrefCMSnoop {}{M.~He, R.~J. Fries, and R.~Rapp, ``Heavy flavor at the large
+  hadron collider in a strong coupling approach'',} \textit{ Phys. Lett. B}
+  \textbf{ 735} (2014) 445,
+  \href{http://dx.doi.org/10.1016/j.physletb.2014.05.050}{\doi{10.1016/j.physletb.2014.05.050}},
+\href{http://www.arXiv.org/abs/1401.3817}{\texttt{arXiv:1401.3817}}.
+%%CITATION = ARXIV:1401.3817;%%.
+
+\bibitem{Acharya:2018hre}
+\hrefCMSnoop {}{{ALICE} Collaboration, ``{Measurement of D$^{0}$, D$^{+}$,
+  D$^{*+}$ and D$_{s}^{+}$ production in Pb-Pb collisions at $
+  \sqrtsNN=5.02$\TeV}'',} \textit{ JHEP} \textbf{ 10} (2018) 174,
+  \href{http://dx.doi.org/10.1007/JHEP10(2018)174}{\doi{10.1007/JHEP10(2018)174}},
+\href{http://www.arXiv.org/abs/1804.09083}{\texttt{arXiv:1804.09083}}.
+%%CITATION = ARXIV:1804.09083;%%.
+
+\bibitem{BsPbPbCMS}
+\hrefCMSnoop {}{{CMS} Collaboration, ``{Measurement of B$^0_\mathrm{s}$ meson
+  production in pp and PbPb collisions at $\sqrt{s_\mathrm{NN}} =$ 5.02
+  TeV}'',} \textit{ Phys. Lett. B} \textbf{ 796} (2019) 168,
+  \href{http://dx.doi.org/10.1016/j.physletb.2019.07.014}{\doi{10.1016/j.physletb.2019.07.014}},
+\href{http://www.arXiv.org/abs/1810.03022}{\texttt{arXiv:1810.03022}}.
+%%CITATION = ARXIV:1810.03022;%%.
+
+\bibitem{CMSBmesonpp}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Measurement of the {$B^+$} production
+  cross section in $pp$ collisions at {$\sqrts =7\TeV$}'',} \textit{ Phys. Rev.
+  Lett.} \textbf{ 106} (2011) 112001,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.106.112001}{\doi{10.1103/PhysRevLett.106.112001}},
+  \href{http://www.arXiv.org/abs/1101.0131}{\texttt{arXiv:1101.0131}}.
+
+\bibitem{Chatrchyan:2011pw}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Measurement of the {$B^0$} production
+  cross section in \pp collisions at {$\sqrts =7\TeV$}'',} \textit{ Phys. Rev.
+  Lett.} \textbf{ 106} (2011) 252001,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.106.252001}{\doi{10.1103/PhysRevLett.106.252001}},
+\href{http://www.arXiv.org/abs/1104.2892}{\texttt{arXiv:1104.2892}}.
+%%CITATION = ARXIV:1104.2892;%%.
+
+\bibitem{Chatrchyan:2011vh}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Measurement of the {$\PBzs$} production
+  cross section with {$ \PBzs \rightarrow \PJGy \phi $} decays in \pp
+  collisions at {$\sqrts = 7\TeV$}'',} \textit{ Phys. Rev. D} \textbf{ 84}
+  (2011) 052008,
+  \href{http://dx.doi.org/10.1103/PhysRevD.84.052008}{\doi{10.1103/PhysRevD.84.052008}},
+\href{http://www.arXiv.org/abs/1106.4048}{\texttt{arXiv:1106.4048}}.
+%%CITATION = ARXIV:1106.4048;%%.
+
+\bibitem{ATLAS:2013cia}
+\hrefCMSnoop {}{{ATLAS} Collaboration, ``Measurement of the differential
+  cross-section of {$\PBp$} meson production in pp collisions at {$\sqrts =
+  7\TeV$} at {ATLAS}'',} \textit{ JHEP} \textbf{ 10} (2013) 042,
+  \href{http://dx.doi.org/10.1007/JHEP10(2013)042}{\doi{10.1007/JHEP10(2013)042}},
+\href{http://www.arXiv.org/abs/1307.0126}{\texttt{arXiv:1307.0126}}.
+%%CITATION = ARXIV:1307.0126;%%.
+
+\bibitem{LHCb:2013JHEP}
+\hrefCMSnoop {}{{LHCb} Collaboration, ``Measurement of {$\PB$} meson production
+  cross-sections in proton-proton collisions at {$\sqrts = 7\TeV$}'',} \textit{
+  JHEP} \textbf{ 08} (2013) 117,
+  \href{http://dx.doi.org/10.1007/JHEP08(2013)117}{\doi{10.1007/JHEP08(2013)117}},
+  \href{http://www.arXiv.org/abs/1306.3663}{\texttt{arXiv:1306.3663}}.
+
+\bibitem{Aaij:2014hla}
+\hrefCMSnoop {}{{LHCb} Collaboration, ``Measurement of the
+  {$\chi_\mathrm{b}(3P)$} mass and of the relative rate of
+  {$\chi_{\mathrm{b1}}(1P)$} and {$\chi_{\mathrm{b2}}(1P)$} production'',}
+  \textit{ JHEP} \textbf{ 10} (2014) 88,
+  \href{http://dx.doi.org/10.1007/JHEP10(2014)088}{\doi{10.1007/JHEP10(2014)088}},
+\href{http://www.arXiv.org/abs/1409.1408}{\texttt{arXiv:1409.1408}}.
+%%CITATION = ARXIV:1409.1408;%%.
+
+\bibitem{Aaij:2012dd}
+\hrefCMSnoop {}{{LHCb} Collaboration, ``Measurements of {${B}_{{c}}^+$}
+  production and mass with the {${B}_{{c}}^+ \to {J}/\psi \pi^+$} decay'',}
+  \textit{ Phys. Rev. Lett.} \textbf{ 109} (2012) 232001,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.109.232001}{\doi{10.1103/PhysRevLett.109.232001}},
+\href{http://www.arXiv.org/abs/1209.5634}{\texttt{arXiv:1209.5634}}.
+%%CITATION = ARXIV:1209.5634;%%.
+
+\bibitem{Aaij:2015fea}
+\hrefCMSnoop {}{{LHCb} Collaboration, ``Study of the production of
+  {$\Lambda_\mathrm{b}^0$} and {$\overline{\mathrm{B}}^0$} hadrons in pp
+  collisions and first measurement of the {$\Lambda_\mathrm{b}^0\rightarrow
+  \mathrm{J}/\psi pK^-$} branching fraction'',} \textit{ Chin. Phys. C}
+  \textbf{ 40} (2016) 011001,
+  \href{http://dx.doi.org/10.1088/1674-1137/40/1/011001}{\doi{10.1088/1674-1137/40/1/011001}},
+\href{http://www.arXiv.org/abs/1509.00292}{\texttt{arXiv:1509.00292}}.
+%%CITATION = ARXIV:1509.00292;%%.
+
+\bibitem{Aaij:2014ija}
+\hrefCMSnoop {}{{LHCb} Collaboration, ``Measurement of {${B}_{c}^+$} production
+  in proton-proton collisions at {$\sqrt{s}=8$ TeV}'',} \textit{ Phys. Rev.
+  Lett.} \textbf{ 114} (2015) 132001,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.114.132001}{\doi{10.1103/PhysRevLett.114.132001}},
+\href{http://www.arXiv.org/abs/1411.2943}{\texttt{arXiv:1411.2943}}.
+%%CITATION = ARXIV:1411.2943;%%.
+
+\bibitem{Khachatryan:2016csy}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Measurement of the total and
+  differential inclusive {$B^+$} hadron cross sections in pp collisions at
+  {$\sqrt{s}= 13$\TeV}'',} \textit{ Phys. Lett. B} \textbf{ 771} (2017) 435,
+  \href{http://dx.doi.org/10.1016/j.physletb.2017.05.074}{\doi{10.1016/j.physletb.2017.05.074}},
+\href{http://www.arXiv.org/abs/1609.00873}{\texttt{arXiv:1609.00873}}.
+%%CITATION = ARXIV:1609.00873;%%.
+
+\bibitem{Khachatryan:2015uja}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Study of {$B$} meson production in
+  {p+Pb} collisions at {$\sqrtsNN = 5.02$\TeV} using exclusive hadronic
+  decays'',} \textit{ Phys. Rev. Lett.} \textbf{ 116} (2016) 032301,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.116.032301}{\doi{10.1103/PhysRevLett.116.032301}},
+\href{http://www.arXiv.org/abs/1508.06678}{\texttt{arXiv:1508.06678}}.
+%%CITATION = ARXIV:1508.06678;%%.
+
+\bibitem{BpPbPbCMS}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Measurement of the
+  ${B}^{\ifmmode\pm\else\textpm\fi{}}$ meson nuclear modification factor in
+  pb-pb collisions at $\sqrt{{s}_{NN}}=5.02\text{ }\text{ }\mathrm{TeV}$'',}
+  \textit{ Phys. Rev. Lett.} \textbf{ 119} (2017) 152301,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.119.152301}{\doi{10.1103/PhysRevLett.119.152301}}.
+
+\bibitem{TRK-11-001}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Description and performance of track and
+  primary-vertex reconstruction with the {CMS} tracker'',} \textit{ JINST}
+  \textbf{ 9} (2014) P10009,
+  \href{http://dx.doi.org/10.1088/1748-0221/9/10/P10009}{\doi{10.1088/1748-0221/9/10/P10009}},
+\href{http://www.arXiv.org/abs/1405.6569}{\texttt{arXiv:1405.6569}}.
+%%CITATION = ARXIV:1405.6569;%%.
+
+\bibitem{centralityref}
+\hrefCMSnoop {}{{CMS} Collaboration, ``{Dependence on pseudorapidity and
+  centrality of charged hadron production in PbPb collisions at a
+  nucleon-nucleon centre-of-mass energy of 2.76 TeV}'',} \textit{ JHEP}
+  \textbf{ 08} (2011) 141,
+  \href{http://dx.doi.org/10.1007/JHEP08(2011)141}{\doi{10.1007/JHEP08(2011)141}},
+\href{http://www.arXiv.org/abs/1107.4800}{\texttt{arXiv:1107.4800}}.
+%%CITATION = ARXIV:1107.4800;%%.
+
+\bibitem{bib_CMS}
+\hrefCMSnoop {}{{CMS} Collaboration, ``The {CMS} experiment at the {CERN}
+  {LHC}'',} \textit{ JINST} \textbf{ 3} (2008) S08004,
+  \href{http://dx.doi.org/10.1088/1748-0221/3/08/S08004}{\doi{10.1088/1748-0221/3/08/S08004}}.
+
+\bibitem{Sjostrand:2014zea}
+T.~Sj{\"o}strand\hrefCMSnoop {}{ {et~al.}, ``An introduction to {PYTHIA
+  8.2}'',} \textit{ Comput. Phys. Commun.} \textbf{ 191} (2015) 159,
+  \href{http://dx.doi.org/10.1016/j.cpc.2015.01.024}{\doi{10.1016/j.cpc.2015.01.024}},
+\href{http://www.arXiv.org/abs/1410.3012}{\texttt{arXiv:1410.3012}}.
+%%CITATION = ARXIV:1410.3012;%%.
+
+\bibitem{Khachatryan:2015pea}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Event generator tunes obtained from
+  underlying event and multiparton scattering measurements'',} \textit{ Eur.
+  Phys. J. C} \textbf{ 76} (2016)
+  \href{http://dx.doi.org/10.1140/epjc/s10052-016-3988-x}{\doi{10.1140/epjc/s10052-016-3988-x}},
+\href{http://www.arXiv.org/abs/1512.00815}{\texttt{arXiv:1512.00815}}.
+%%CITATION = ARXIV:1512.00815;%%.
+
+\bibitem{Allison:2016lfl}
+\hrefCMSnoop {}{J.~Allison {et~al.}, ``Recent developments in {Geant4}'',}
+  \textit{ Nucl. Instrum. Meth. A} \textbf{ 835} (2016) 186,
+\href{http://dx.doi.org/10.1016/j.nima.2016.06.125}{\doi{10.1016/j.nima.2016.06.125}}.
+%%CITATION = NUIMA,A835,186;%%.
+
+\bibitem{Lange:2001uf}
+\hrefCMSnoop {}{D.~J. Lange, ``The {EvtGen} particle decay simulation
+  package'',} \textit{ Nucl. Instrum. Meth. A} \textbf{ 462} (2001) 152,
+\href{http://dx.doi.org/10.1016/S0168-9002(01)00089-4}{\doi{10.1016/S0168-9002(01)00089-4}}.
+%%CITATION = NUIMA,A462,152;%%.
+
+\bibitem{Barberio:1990ms}
+\hrefCMSnoop {}{E.~Barberio, B.~van Eijk, and Z.~Was, ``{PHOTOS}: A universal
+  monte carlo for {QED} radiative corrections in decays'',} \textit{ Comput.
+  Phys. Commun.} \textbf{ 66} (1991) 115,
+\href{http://dx.doi.org/10.1016/0010-4655(91)90012-A}{\doi{10.1016/0010-4655(91)90012-A}}.
+%%CITATION = CPHCB,66,115;%%.
+
+\bibitem{Lokhtin:2005px}
+\hrefCMSnoop {}{I.~P. Lokhtin and A.~M. Snigirev, ``A model of jet quenching in
+  ultrarelativistic heavy ion collisions and high-{\pt} hadron spectra at
+  {RHIC}'',} \textit{ Eur. Phys. J. C} \textbf{ 45} (2006) 211,
+  \href{http://dx.doi.org/10.1140/epjc/s2005-02426-3}{\doi{10.1140/epjc/s2005-02426-3}},
+\href{http://www.arXiv.org/abs/hep-ph/0506189}{\texttt{arXiv:hep-ph/0506189}}.
+%%CITATION = HEP-PH/0506189;%%.
+
+\bibitem{Khachatryan:2016odn}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Charged-particle nuclear modification
+  factors in {PbPb} and {pPb} collisions at {$\sqrtsNN = 5.02$\TeV}'',}
+  \textit{ JHEP} \textbf{ 04} (2017) 039,
+  \href{http://dx.doi.org/10.1007/JHEP04(2017)039}{\doi{10.1007/JHEP04(2017)039}},
+\href{http://www.arXiv.org/abs/1611.01664}{\texttt{arXiv:1611.01664}}.
+%%CITATION = ARXIV:1611.01664;%%.
+
+\bibitem{Khachatryan:2010xs}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Transverse momentum and pseudorapidity
+  distributions of charged hadrons in pp collisions at {$\sqrts = 0.9$ and
+  2.76\TeV}'',} \textit{ JHEP} \textbf{ 02} (2010) 041,
+  \href{http://dx.doi.org/10.1007/JHEP02(2010)041}{\doi{10.1007/JHEP02(2010)041}},
+\href{http://www.arXiv.org/abs/1002.0621}{\texttt{arXiv:1002.0621}}.
+%%CITATION = ARXIV:1002.0621;%%.
+
+\bibitem{Chatrchyan:2012xi}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Performance of {CMS} muon reconstruction
+  in pp collision events at {$\sqrt{s}=7$\TeV}'',} \textit{ JINST} \textbf{ 7}
+  (2012) P10002,
+  \href{http://dx.doi.org/10.1088/1748-0221/7/10/P10002}{\doi{10.1088/1748-0221/7/10/P10002}},
+\href{http://www.arXiv.org/abs/1206.4071}{\texttt{arXiv:1206.4071}}.
+%%CITATION = ARXIV:1206.4071;%%.
+
+\bibitem{pdg2018}
+\hrefCMSnoop {}{{Particle Data Group} Collaboration, ``{Review of particle
+  physics}'',} \textit{ Phys. Rev. D} \textbf{ 98} (2018) 030001,
+\href{http://dx.doi.org/10.1103/PhysRevD.98.030001}{\doi{10.1103/PhysRevD.98.030001}}.
+%%CITATION = CHPHD,C40,100001;%%.
+
+\bibitem{Hocker:2007ht}
+\href {http://pos.sissa.it/archive/conferences/050/040/ACAT_040.pdf}{H.~Voss,
+  A.~H{\"o}cker, J.~Stelzer, and F.~Tegenfeldt, ``{TMVA} -- the toolkit for
+  multivariate data analysis'',} in \textit{ XIth International Workshop on
+  Advanced Computing and Analysis Techniques in Physics Research (ACAT)},
+  p.~40.
+\newblock 2009.
+\newblock
+\href{http://www.arXiv.org/abs/physics/0703039}{\texttt{arXiv:physics/0703039}}.
+\newblock
+%%CITATION = PHYSICS/0703039;%%.
+
+\bibitem{Khachatryan:2010zg}
+\hrefCMSnoop {}{{CMS} Collaboration, ``{Upsilon production cross-section in pp
+  collisions at $\sqrt{s}=7 \TeV$}'',} \textit{ Phys. Rev. D} \textbf{ 83}
+  (2011) 112004,
+  \href{http://dx.doi.org/10.1103/PhysRevD.83.112004}{\doi{10.1103/PhysRevD.83.112004}},
+\href{http://www.arXiv.org/abs/1012.5545}{\texttt{arXiv:1012.5545}}.
+%%CITATION = ARXIV:1012.5545;%%.
+
+\bibitem{splot}
+\hrefCMSnoop {}{M.~Pivk and F.~R. Le~Diberder, ``{SPlot: A Statistical tool to
+  unfold data distributions}'',} \textit{ Nucl. Instrum. Meth. A} \textbf{ 555}
+  (2005) 356,
+  \href{http://dx.doi.org/10.1016/j.nima.2005.08.106}{\doi{10.1016/j.nima.2005.08.106}},
+\href{http://www.arXiv.org/abs/physics/0402083}{\texttt{arXiv:physics/0402083}}.
+%%CITATION = PHYSICS/0402083;%%.
+
+\bibitem{bootstrap}
+\hrefCMSnoop {}{B.~Efron, ``Bootstrap methods: another look at the
+  jackknife'',} \textit{ Ann. Statist.} \textbf{ 7} (1979) 1,
+  \href{http://dx.doi.org/10.1214/aos/1176344552}{\doi{10.1214/aos/1176344552}}.
+
+\bibitem{tamu14}
+\hrefCMSnoop {}{M.~He, R.~J. Fries, and R.~Rapp, ``Heavy flavor at the large
+  hadron collider in a strong coupling approach'',} \textit{ Phys. Lett. B}
+  \textbf{ 735} (2014) 445,
+  \href{http://dx.doi.org/10.1016/j.physletb.2014.05.050}{\doi{10.1016/j.physletb.2014.05.050}},
+\href{http://www.arXiv.org/abs/1401.3817}{\texttt{arXiv:1401.3817}}.
+%%CITATION = ARXIV:1401.3817;%%.
+
+\end{thebibliography}\endgroup

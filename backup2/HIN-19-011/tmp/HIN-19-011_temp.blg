@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: HIN-19-011_temp.aux
+The style file: auto_generated.bst
+Database file #1: auto_generated.bib
+Warning--I didn't find a database entry for "Khachatryan:2016bia"
+Warning--I didn't find a database entry for "glauber2007"
+Warning--I didn't find a database entry for "glauber2017"
+Warning--I didn't find a database entry for "fsfulhcb2019"
+Warning--I didn't find a database entry for "fsfulhcb2013"
+Warning--I didn't find a database entry for "fsfulhcb2020"
+Warning--empty institution in Eloss1
+You've used 54 entries,
+            2558 wiz_defined-function locations,
+            1102 strings with 16826 characters,
+and the built_in function-call counts, 17104 in all, are:
+= -- 1948
+> -- 245
+< -- 1
++ -- 101
+- -- 47
+* -- 1592
+:= -- 1970
+add.period$ -- 106
+call.type$ -- 54
+change.case$ -- 54
+chr.to.int$ -- 0
+cite$ -- 55
+duplicate$ -- 1238
+empty$ -- 1734
+format.name$ -- 48
+if$ -- 4573
+int.to.chr$ -- 0
+int.to.str$ -- 54
+missing$ -- 155
+newline$ -- 269
+num.names$ -- 22
+pop$ -- 315
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 675
+stack$ -- 0
+substring$ -- 410
+swap$ -- 571
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 72
+width$ -- 56
+write$ -- 736
+(There were 7 warnings)
